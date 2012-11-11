@@ -1,0 +1,120 @@
+normalize()
+base()
+
+blue = #3e444d
+
+@font-face
+  font-family: 'entypo'
+  src: url('/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'), 
+       url('/fonts/entypo/entypo.woff') format('woff'), 
+       url('/fonts/entypo/entypo.ttf')  format('truetype'),
+       url('/fonts/entypo/entypo.svg#svgFontName') format('svg')
+
+body
+  border-top: 7px solid #e77552
+  font-family: 'freight-sans-pro', sans-serif
+  position: relative
+  background: #f6f8fb
+  overflow-x: hidden
+
+.fork-ribbon
+  display: block
+  absolute: top 25px right -45px
+  rotate: 45deg
+  background: blue
+  padding: 5px 50px
+  color: white
+  text-decoration: none
+
+header
+  group()
+  padding: 60px
+  width: 960px
+  margin: 0 auto
+  
+  .logo
+    ir('/img/logo.png', 163px 84px)
+    float: left
+    display: block
+    transition()
+
+    &:hover
+      opacity: .8
+
+  nav
+    float: right
+
+    ul
+      inline-list()
+      padding-top: 30px
+      color: #a8a9ab
+      font-size: 18px
+
+      li a
+        color: #a8a9ab
+        text-decoration: none
+        transition()
+
+        &:hover
+          color: #8e8e8e
+
+#hero
+  background: blue
+  color: white
+  padding: 50px
+
+  h2
+    width: 800px
+    margin: 0 auto
+    font-weight: normal
+    text-align: center
+    font-size: 2.5em
+
+  ul
+    inline-list(120px)
+    width: 700px
+    margin: 0 auto
+
+    li
+
+      &:nth-child(2) .icon
+        -webkit-animation-delay: .3s
+
+      &:nth-child(3) .icon
+        -webkit-animation-delay: .5s
+
+      .icon
+        -webkit-animation: icon-in 1s ease
+        font-family: 'entypo'
+        font-size: 180px
+        text-align: center
+        opacity: 0
+
+      span
+        opacity: .6
+
+#content
+  width: 960px
+  margin: 0 auto
+
+  h3
+    font-weight: normal
+    color: #333
+    font-size: 2em
+    margin-bottom: 15px
+    margin-top: 25px
+
+  p
+    color: #888
+    font-size: 16px
+    line-height: 1.6em
+
+// animations!
+
+@keyframes icon-in
+  0%
+    opacity: 0
+    -webkit-transform: translateY(20px)
+  100%
+    opacity: 1
+    -webkit-transform: translateY(0px)
