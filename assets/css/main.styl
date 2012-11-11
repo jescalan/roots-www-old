@@ -2,6 +2,7 @@ normalize()
 base()
 
 blue = #3e444d
+orange = #e77552
 
 @font-face
   font-family: 'entypo'
@@ -11,11 +12,19 @@ blue = #3e444d
        url('/fonts/entypo/entypo.svg#svgFontName') format('svg')
 
 body
-  border-top: 7px solid #e77552
+  border-top: 7px solid orange
   font-family: 'freight-sans-pro', sans-serif
   position: relative
   background: #f6f8fb
   overflow-x: hidden
+  -webkit-animation: fadeIn 1s ease
+
+code
+  color: orange
+  font-size: .95em
+
+  &.big
+    font-size: 1.4em
 
 .fork-ribbon
   display: block
@@ -109,6 +118,20 @@ header
     font-size: 16px
     line-height: 1.6em
 
+  ul
+    color: #888
+    font-size: 16px
+    line-height: 1.6em
+
+  a
+    color: blue
+    text-decoration: none
+    transition()
+    border-bottom: 1px solid transparent
+
+    &:hover
+      border-bottom: 1px solid orange
+
 // animations!
 
 @keyframes icon-in
@@ -118,3 +141,9 @@ header
   100%
     opacity: 1
     -webkit-transform: translateY(0px)
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1

@@ -12,10 +12,47 @@
       span css library &amp; live reload
 
 #content
+  h3#overview overview
   :markdown
-    ### overview
+    Roots is (currently) a static site build tool built on best pratices for advanced front-end web development. It has a very large number of features, which I’ll attempt to list below. It will also be built as a plugin for [express.js](http://expressjs.com/) and [rails](http://rubyonrails.org/) in the very near future.
 
-    Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    - extremely simple [installation](#installation)
+    - clean and minimal default project template
+    - [jade](http://jade-lang.com/), [stylus](http://learnboost.github.com/stylus/), and [coffeescript](http://coffeescript.org/) default stack
+    - super fast live reload implementation
+    - compile errors displayed as a flash message, doesn’t break workflow
+    - layouts and partials fully supported
+    - [coffeescript](http://coffeescript.org/) and [markdown](http://daringfireball.net/projects/markdown/) can be written directly in views
+    - extremely robust, modular, and powerful [css helper library](#css-library) built in
+    - global variables and functions (view helpers)
+    - clean and intuitive app settings file
+    - single command deploy to heroku
+    - intelligently minifies html, css, and js on deploy
+    - efficient client-side js management through [bower](http://twitter.github.com/bower/) and [require.js](http://requirejs.org/)
+    - easy to extend with a simple and well-documented plugin interface
 
-    ### installation
-    
+  h3#installation installation
+  :markdown
+    Installation is super straightforward and relies only on node.js, which has a well-maintined universal installer. If you want to do it the “longer and more manual way”, head over to nodejs.org and install node, then run `npm install roots-static -g` from your command line. Or even easier, if you are on mac or linux, run the command below:
+
+  code.big curl get.roots.cx | sh
+
+  h3#commands commands
+  :markdown
+    Once you have roots installed, it exposes a few useful commands for getting your project set up. You must be at least somewhat familiar with the command line to be able to use roots.
+
+    `$ roots new name`   - creates a new project in the current directory called name    
+    `$ roots compile`    - compiles, minifies, and compresses the project to the public folder    
+    `$ roots watch`      - compiles the project, opens it on a local server, watches files for change, and live reloads    
+    `$ roots update`     - installs a new version of roots if there is one    
+    `$ roots js`         - wrapper for bower, type `roots help` for details on roots js commands    
+
+    ...and if you forget or need help, just type `roots help` for a list of available commands
+
+  h3#css-library css library
+  :markdown
+    Documentation is coming soon for the css library!
+
+  h3#help help
+  :markdown
+    If you need help or something is confusing, feel free to [file an issue](http://github.com/jenius/roots-cli/issues), or get in touch with me directly (you shouldn't have much trouble finding my email). I can't debug your app, but if you have found an issue or have a feature request I'd be more than happy to discuss and try to implement it!
