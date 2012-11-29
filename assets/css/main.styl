@@ -186,6 +186,88 @@ header
         &:hover
           color: #e2d3cf
 
+.easing-demo
+  
+  & > div
+    width: 70%
+    margin-left: 20px
+    height: 45px
+    cursor: pointer
+
+    .animation
+      float: right
+      width: 370px
+
+    .name
+      float: left
+      font-weight: 600
+
+    .box
+      size: 20px
+      background: #E9754D
+      margin-bottom: -10px
+      margin-left: 0%
+      position: relative
+      z-index: 2
+
+    .line
+      border-bottom: 1px solid #ccc
+      width: 100%
+
+    &:hover .box
+      margin-left: 100%
+
+    &.ease-in-quad .box
+      transition(all 1s ease-in-quad)
+    &.ease-in-cubic .box
+      transition(all 1s ease-in-cubic)
+    &.ease-in-quart .box
+      transition(all 1s ease-in-quart)
+    &.ease-in-quint .box
+      transition(all 1s ease-in-quint)
+    &.ease-in-sine .box
+      transition(all 1s ease-in-sine)
+    &.ease-in-expo .box
+      transition(all 1s ease-in-expo)
+    &.ease-in-circ .box
+      transition(all 1s ease-in-circ)
+    &.ease-in-back .box
+      transition(all 1s ease-in-back)
+
+    &.ease-out-quad .box
+      transition(all 1s ease-out-quad)
+    &.ease-out-cubic .box
+      transition(all 1s ease-out-cubic)
+    &.ease-out-quart .box
+      transition(all 1s ease-out-quart)
+    &.ease-out-quint .box
+      transition(all 1s ease-out-quint)
+    &.ease-out-sine .box
+      transition(all 1s ease-out-sine)
+    &.ease-out-expo .box
+      transition(all 1s ease-out-expo)
+    &.ease-out-circ .box
+      transition(all 1s ease-out-circ)
+    &.ease-out-back .box
+      transition(all 1s ease-out-back)
+
+    &.ease-in-out-quad .box
+      transition(all 1s ease-in-out-quad)
+    &.ease-in-out-cubic .box
+      transition(all 1s ease-in-out-cubic)
+    &.ease-in-out-quart .box
+      transition(all 1s ease-in-out-quart)
+    &.ease-in-out-quint .box
+      transition(all 1s ease-in-out-quint)
+    &.ease-in-out-sine .box
+      transition(all 1s ease-in-out-sine)
+    &.ease-in-out-expo .box
+      transition(all 1s ease-in-out-expo)
+    &.ease-in-out-circ .box
+      transition(all 1s ease-in-out-circ)
+    &.ease-in-out-back .box
+      transition(all 1s ease-in-out-back)
+
 // responsiveness!
 
 

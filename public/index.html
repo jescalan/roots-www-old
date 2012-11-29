@@ -120,7 +120,7 @@
 <p><strong><code>helper.layout_contents</code></strong><br><em>If the file&#39;s target extension is html</em>, Returns the contents of the layout file it will be compiled into.
 
 </p>
-<p><strong><code>helper.locals(extra_object)</code></strong><br>Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals.
+<p><strong><code>helper.locals(extra_object)</code></strong><br>Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals. You will want to add yield when compiling the layout, like in the ejs compiler example above.
 
 </p>
 <p><strong><code>helper.write(content)</code></strong><br>Writes the provided string to the correct file in the public directory.  
