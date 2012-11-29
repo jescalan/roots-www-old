@@ -19,6 +19,16 @@ body
   overflow-x: hidden
   -webkit-animation: fadeIn 1s ease
 
+strong
+  font-weight: 600
+
+  code
+    color: inherit
+
+hr
+  border: 1px solid #ccc
+  border-top: none
+
 code
   color: orange
   font-size: .95em
@@ -29,7 +39,7 @@ code
 .fork-ribbon
   display: block
   absolute: top 25px right -45px
-  rotate: 45deg
+  transform: rotate(45deg)
   background: blue
   padding: 5px 50px
   color: white
@@ -79,6 +89,9 @@ header
     text-align: center
     font-size: 2.5em
 
+    span
+      font-size: .8em
+
   ul
     inline-list(120px)
     width: 700px
@@ -103,8 +116,14 @@ header
         opacity: .6
 
 #content
-  width: 960px
+  max-width: 960px
+  padding: 0 40px
   margin: 0 auto
+
+  &.cssdocs
+    padding-left: 260px
+    padding-right: 0
+    max-width: 700px
 
   h3
     font-weight: normal
@@ -114,7 +133,7 @@ header
     margin-top: 25px
 
   p
-    color: #888
+    color: #7e7e7e
     font-size: 16px
     line-height: 1.6em
 
@@ -131,6 +150,41 @@ header
 
     &:hover
       border-bottom: 1px solid orange
+
+#cssnav
+  position: fixed
+  margin-left: -260px
+  font-size: 18px
+
+  ul
+    background: #3F444C
+    width: 170px
+    reset-list()
+    padding: 10px 20px
+    margin-top: 15px
+
+    li
+      margin: 7px 0
+
+      &.active
+        bg: '/img/ribbon.png'
+        size: 200 39
+        margin-left: -28px
+        padding-left: 28px
+        margin-bottom: -12px
+        padding-top: 3px
+        bold()
+        text-shadow: 0 1px 1px rgba(#000,.2)
+
+      a
+        reset-link()
+        color: #fff
+
+        &:hover
+          color: #e2d3cf
+
+// responsiveness!
+
 
 // animations!
 

@@ -1,1 +1,49 @@
-(function(){var t;t=["http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"],require(t,function(){return $(function(){var t,n,e,r;return setTimeout(function(){return $(".icon").css({opacity:1})},500),t=function(t){return t.replace(/^\//,"").replace(/(index|default).[a-zA-Z]{3,4}$/,"").replace(/\/$/,"")},$("a[href*=#]").each(function(){var r,o,a,i;return i=t(this.pathname)||n,n===i&&(location.hostname===this.hostname||!this.hostname)&&this.hash.replace(/#/,"")&&(r=$(this.hash),o=this.hash)?(a=r.offset().top,$(this).on("click",function(t){return t.preventDefault(),$(e).animate({scrollTop:a},400,function(){return location.hash=o})})):void 0}),r=function(){var t,n,e,r,o;for(r=0,o=arguments.length;o>r;r++){if(n=arguments[r],t=$(n),t.scrollTop()>0)return n;if(t.scrollTop(1),e=t.scrollTop()>0,t.scrollTop(0),e)return n}return[]},n=t(location.pathname),e=r("html","body")})})}).call(this);
+(function() {
+  var js;
+
+  js = ["http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", '/js/waypoints.min.js'];
+
+  require(js, function() {
+    return $(function() {
+      setTimeout((function() {
+        return $('.icon').css({
+          opacity: 1
+        });
+      }), 500);
+      if ($(window).scrollTop() > 392) {
+        $('#cssnav').css({
+          top: 5
+        });
+      }
+      $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 392) {
+          return $('#cssnav').css({
+            top: 5
+          });
+        } else {
+          return $('#cssnav').css({
+            top: 385 - $(window).scrollTop()
+          });
+        }
+      });
+      $('.cssdocs h3').waypoint(function() {
+        $('#cssnav li').removeClass('active');
+        return $("a[href='#" + ($(this).text()) + "']").parent().addClass('active');
+      });
+      return $('a[href*=#]:not([href=#])').on('click', function() {
+        var factor, target;
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
+          target = $(this.hash).length ? $(this.hash) : $("[name=" + (this.hash.slice(1)) + "]");
+          if (target.length) {
+            factor = target.offset().top > $(window).scrollTop() ? -1 : 1;
+            $('html,body').animate({
+              scrollTop: target.offset().top - factor
+            }, 500);
+            return false;
+          }
+        }
+      });
+    });
+  });
+
+}).call(this);
