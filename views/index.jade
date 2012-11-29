@@ -14,7 +14,7 @@
 #content
   h3#overview overview
   :markdown
-    Roots is (currently) a static site build tool built on best pratices for advanced front-end web development. It has a very large number of features, which I’ll attempt to list below. It will also be built as a plugin for [express.js](http://expressjs.com/) and [rails](http://rubyonrails.org/) in the very near future.
+    Roots is toolkit built on best pratices for advanced front-end web development. It has a very large number of features, which I’ll attempt to list below. Roots comes in the form of a static site build tool by default, but also includes templates and plugins for [express.js](http://expressjs.com/) and [rails](http://rubyonrails.org/). Plugins for [RailwayJS](http://railwayjs.com/) and [Sinatra](http://www.sinatrarb.com/) are also in the works.
 
     - extremely simple [installation](#installation)
     - clean and minimal default project template
@@ -23,7 +23,7 @@
     - compile errors displayed as a flash message, doesn’t break workflow
     - layouts and partials fully supported
     - [coffeescript](http://coffeescript.org/) and [markdown](http://daringfireball.net/projects/markdown/) can be written directly in views
-    - extremely robust, modular, and powerful [css helper library](#css-library) built in
+    - extremely robust, modular, and powerful [css helper library](/css) built in
     - global variables and functions (view helpers)
     - clean and intuitive app settings file
     - single command deploy to heroku
@@ -33,7 +33,7 @@
 
   h3#installation installation
   :markdown
-    Installation is super straightforward and relies only on [node.js](http://nodejs.org), which has a well-maintined universal installer. If you want to do it the "longer and more manual way", head over to nodejs.org and install node, then run `npm install roots-static -g` from your command line. Or even easier, if you are on mac or linux, run the command below from your terminal:
+    Installation is super straightforward and relies only on [node.js](http://nodejs.org), which has a well-maintined universal installer. If you want to do it the "longer and more manual way", head over to nodejs.org and install node, then run `npm install roots -g` from your command line. Or even easier, if you are on mac or linux, run the command below from your terminal:
 
   code.big curl get.roots.cx | sh
 
@@ -49,10 +49,52 @@
 
     ...and if you forget or need help, just type `roots help` for a list of available commands
 
-  h3#css-library css library
+  h3#plugins plugins
   :markdown
-    Documentation is coming soon for the css library!
+    Roots ships with a few core compilers that are optimized for a speedy and efficient workflow. But of course everyone has their own preferred tools, and if there are languages you would rather work in, you can build them in to roots through the plugin interface.
+
+    Plugins need only be one file, and are frequently less than 10 lines of javascript (many of the core compilers are, actually). To create a plugin, just drop a new file, javascript or coffeescript, into `/plugins`. The module need only export two methods, `settings` and `compile`. To get you started, you can run `roots plugin generate` to have roots generate a basic plugin template.
+
+    Here are a few examples of how plugins can look. Note that plugins are executed inside roots' environment, so if you want to require any external files, you need to use `module.require()` instead of just `require()` in order to have roots look for files starting in the plugins directory.
+
+    - [sass compiler](https://github.com/jenius/roots-cli/blob/master/test/plugins/sass.coffee) (command line)
+    - [ejs compiler](https://github.com/jenius/roots-cli/blob/master/lib/compilers/core/jade.js) (handles layout files)
+    - [stylus compiler](https://github.com/jenius/roots-cli/blob/master/lib/compilers/core/styl.js) (js library based)
+
+    You will probably notice that a class called `Helper` is provided and does much of the work. This class manages important paths and file info and is designed to make compilers clean and easy to manage. Documentation for the `Helper` class is below.
+
+    **`helper = new Helper(file)`**    
+    Sample code for how to initialize the helper. Takes a single file from the `files` object that the `compile` method receives
+
+    **`helper.extension`**    
+    Returns the extension of the current file
+
+    **`helper.target_extension`**    
+    Returns the extension that the file will compile into
+
+    **`helper.export_path`**    
+    Returns the absolute path that the file will be placed into after compile
+
+    **`helper.file_path`**    
+    Returns the absolute path of the current file
+
+    **`helper.file_contents`**  
+    Returns a string with the contents of the current file
+
+    **`helper.layout_path`**    
+    _If the file's target extension is html_, Returns the absolute path of the layout file it will be compiled into.
+
+    **`helper.layout_contents`**      
+    _If the file's target extension is html_, Returns the contents of the layout file it will be compiled into.
+
+    **`helper.locals(extra_object)`**    
+    Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals.
+
+    **`helper.write(content)`**  
+    Writes the provided string to the correct file in the public directory.  
+
+    If you want to dig into the `Helper` a bit more, feel free to [check out the source](https://github.com/jenius/roots-cli/blob/master/lib/compilers/compile-helper.coffee). It's only one small file.
 
   h3#help help
   :markdown
-    If you need help or something is confusing, feel free to [file an issue](http://github.com/jenius/roots-cli/issues), or get in touch with me directly (you shouldn't have much trouble finding my email). I can't debug your app, but if you have found an issue or have a feature request I'd be more than happy to discuss and try to implement it!
+    Speaking of helpers, if you need help or something is confusing, feel free to [file an issue](http://github.com/jenius/roots-cli/issues), or get in touch with me directly (you shouldn't have much trouble finding my email). I can't debug your app, but if you have found an issue or have a feature request I'd be more than happy to discuss and try to implement it!

@@ -6,7 +6,7 @@
     <meta name="description" content="roots is a light, fast build system for advanced front end development">
     <meta name="author" content="jeff escalante">
     <title>roots | where it all begins</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <script src="//use.typekit.net/ltb5pgo.js"></script><script type="text/javascript">
 (function() {
 
@@ -24,7 +24,7 @@
       <nav>
         <ul>
           <li><a href="/#overview">overview</a></li>
-          <li><a href="/css.html">css library</a></li>
+          <li><a href="/css">css library</a></li>
           <li><a href="/#installation">installation</a></li>
           <li><a href="/#commands">commands</a></li>
           <li><a href="/#plugins">plugins</a></li>
@@ -358,6 +358,6 @@
 
 </div>
   </body>
-  <script data-main="js/main" src="js/require.js"></script><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
+  <script data-main="/js/main" src="/js/require.js"></script><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
 socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reload() }</script>
 </html>

@@ -6,7 +6,7 @@ html
     meta(name='description', content='roots is a light, fast build system for advanced front end development')
     meta(name='author', content= "jeff escalante")
     title roots | where it all begins
-    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='/css/main.css')
     script(src="//use.typekit.net/ltb5pgo.js")
     :coffeescript
       try
@@ -18,7 +18,7 @@ html
     != yield
 
   //- add other scripts through require.js, not here
-  script(data-main="js/main", src="js/require.js")
+  script(data-main="/js/main", src="/js/require.js")
 
   //- this must be included for live reload to work in developement
   //- it will be automatically ignored when deployed
