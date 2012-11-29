@@ -552,12 +552,12 @@ header nav ul li a:hover {
   max-width: 960px;
   padding: 0 40px;
   margin: 0 auto;
+  margin-bottom: 160px;
 }
 #content.cssdocs {
   padding-left: 260px;
   padding-right: 0;
   max-width: 700px;
-  margin-bottom: 160px;
 }
 #content h3 {
   font-weight: normal;
