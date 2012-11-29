@@ -323,7 +323,9 @@ header nav ul li a:hover {
   font-size: 2.5em;
 }
 #hero h2 span {
-  font-size: 0.8em;
+  font-size: 1.4em;
+  margin-right: -4px;
+  font-family: 'entypo';
 }
 #hero ul {
   zoom: 1;
