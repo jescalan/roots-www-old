@@ -31,6 +31,10 @@
     - efficient client-side js management through [bower](http://twitter.github.com/bower/) and [require.js](http://requirejs.org/)
     - easy to extend with a simple and well-documented plugin interface
 
+    Because this is sort of vague, here's a very brief video demonstrating how one might use roots.
+
+  .video
+
   h3#installation installation
   :markdown
     Installation is super straightforward and relies only on [node.js](http://nodejs.org), which has a well-maintined universal installer. If you want to do it the "longer and more manual way", head over to nodejs.org and install node, then run `npm install roots -g` from your command line. Or even easier, if you are on mac or linux, run the command below from your terminal:
@@ -59,7 +63,7 @@
     `roots js uninstall name` - remove `name`    
     `roots js info name` - get more info about `name`    
 
-    There are a lot of great open-source packages registered with bower. Check them out [here](http://sindresorhus.com/bower-components/). In addition, [require.js](http://requirejs.org) is included by default to help load your client-side javascript dependencies smoothly.
+    There are a lot of great open-source packages registered with bower. Check them out [here](http://sindresorhus.com/bower-components/). In addition, [require.js](http://requirejs.org) is included by default in new project templates to help load your client-side javascript dependencies smoothly.
 
   h3#plugins plugins
   :markdown
@@ -69,9 +73,9 @@
 
     Here are a few examples of how plugins can look. Note that plugins are executed inside roots' environment, so if you want to require any external files, you need to use `module.require()` instead of just `require()` in order to have roots look for files starting in the plugins directory.
 
-    - [sass compiler](https://github.com/jenius/roots-cli/blob/master/test/plugins/sass.coffee) (command line)
-    - [ejs compiler](https://github.com/jenius/roots-cli/blob/master/lib/compilers/core/jade.js) (handles layout files)
-    - [stylus compiler](https://github.com/jenius/roots-cli/blob/master/lib/compilers/core/styl.js) (js library based)
+    - [sass compiler](https://github.com/jenius/roots/blob/master/test/plugins/sass.coffee) (command line)
+    - [ejs compiler](https://github.com/jenius/roots/blob/master/lib/compilers/core/jade.js) (handles layout files)
+    - [stylus compiler](https://github.com/jenius/roots/blob/master/lib/compilers/core/styl.js) (js library based)
 
     You will probably notice that a class called `Helper` is provided and does much of the work. This class manages important paths and file info and is designed to make compilers clean and easy to manage. Documentation for the `Helper` class is below.
 
@@ -85,7 +89,7 @@
     Returns the extension that the file will compile into
 
     **`helper.export_path`**    
-    Returns the absolute path that the file will be placed into after compile
+    Returns the absolute path where file will be written after compile
 
     **`helper.file_path`**    
     Returns the absolute path of the current file
@@ -105,7 +109,7 @@
     **`helper.write(content)`**  
     Writes the provided string to the correct file in the public directory.  
 
-    If you want to dig into the `Helper` a bit more, feel free to [check out the source](https://github.com/jenius/roots-cli/blob/master/lib/compilers/compile-helper.coffee). It's only one small file.
+    If you want to dig into the `Helper` a bit more, feel free to [check out the source](https://github.com/jenius/roots/blob/master/lib/compilers/compile-helper.coffee). It's only one small file.
 
     The following commands are also available to make working with plugins easier.
 
@@ -114,21 +118,24 @@
 
   h3#help help
   :markdown
-    Speaking of helpers, if you need help or something is confusing, feel free to [file an issue](http://github.com/jenius/roots-cli/issues), or get in touch with me directly (you shouldn't have much trouble finding my email). I can't debug your app, but if you have found an issue or have a feature request I'd be more than happy to discuss and try to implement it!
+    Speaking of helpers, if you need help or something is confusing, feel free to [file an issue](http://github.com/jenius/roots/issues), or [get in touch with me directly](http://jenius.me/#!/contact). I can't debug your app, but if you have found an issue or have a feature request I'd be more than happy to discuss and try to implement it!
 
     ### faq
 
     **Can I contribute to this project?**    
-    Yes! In fact, I would love it if you did. The repo for the command line client is [right here on github](https://github.com/jenius/roots-cli), and the repo for the css library is [here](https://github.com/jenius/roots-css). Please, help a brother out!
+    Yes! In fact, I would love it if you did. The repo for the command line client is [right here on github](https://github.com/jenius/roots), and the repo for the css library is [here](https://github.com/jenius/roots-css). Please, help a brother out!
 
     **I'm having a problem with roots and I'm mad at you.**    
-    Breathe deep. I know this project is not perfect. I'm only one guy, I'm doing my best &mdash; promise! I'd be happy to look into any issue - just [file an issue on github](https://github.com/jenius/roots-cli/issues) and I'll get to it as quickly as I can.
+    Breathe deep. I know this project is not perfect. I'm only one guy, I'm doing my best &mdash; promise! I'd be happy to look into any issue - just [file an issue on github](https://github.com/jenius/roots/issues) and I'll get to it as quickly as I can.
 
     **Is roots totally free?**    
     Why yes it is! It's licensed under _______, which means you can use it free forever. It's because I love you. If you love roots, I would feel great if you [let me know](http://twitter.com/jescalan).
 
+    **Who is the good-looking guy behind this project?**
+    Oh, you flatter me *blush*. I'm Jeff, and I'm lucky enough to write code and design at the best company in the world, [carrot creative](http://carrotcreative.com). You can find/follow me on the twitters [here](http://twitter.com/jescalan).
+
     **Why isn't this site responsive?**
-    Because it doesn't need to be. You don't code on your mobile phone, so you don't need coding docs there. Be responsable with responsiveness.
+    Because it doesn't need to be. You don't code on your mobile phone, so you don't need coding docs there. Be responsable with responsiveness™.
 
     **Who is responsable for the awesome icons on this site?**    
     Glad you asked! The icons on this site are from [entypo](http://www.entypo.com/), by Daniel Bruce, and he is the man for making such awesome free icons.
