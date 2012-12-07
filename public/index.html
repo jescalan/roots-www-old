@@ -24,11 +24,12 @@
       <nav>
         <ul>
           <li><a href="/#overview">overview</a></li>
-          <li><a href="/css">css library</a></li>
           <li><a href="/#installation">installation</a></li>
           <li><a href="/#commands">commands</a></li>
+          <li><a href="/#client">client-side js</a></li>
           <li><a href="/#plugins">plugins</a></li>
           <li><a href="/#help">help</a></li>
+          <li><a href="/css">css library</a></li>
         </ul>
       </nav>
     </header>
@@ -77,6 +78,15 @@
 
 </p>
 <p>...and if you forget or need help, just type <code>roots help</code> for a list of available commands
+</p>
+
+  <h3 id="client">client-side js</h3><p>Using javascript libraries on the client-side is super helpful, but downloading them for every project and keeping them up to date is a huge pain. Luckily, the wonderful developers at twitter created <a href="http://twitter.github.com/bower/">bower</a> for this exact purpose. You can run <code>roots install</code> followed by any package name to have bower install it directly into the <code>js/components</code> folder of your roots project. Also available:
+
+</p>
+<p><code>roots js list</code> - list of installed packages<br><code>roots js search name</code> - search for a package by <code>name</code><br><code>roots js update name</code> - update <code>name</code> to the latest version<br><code>roots js uninstall name</code> - remove <code>name</code><br><code>roots js info name</code> - get more info about <code>name</code>    
+
+</p>
+<p>There are a lot of great open-source packages registered with bower. Check them out <a href="http://sindresorhus.com/bower-components/">here</a>. In addition, <a href="http://requirejs.org">require.js</a> is included by default to help load your client-side javascript dependencies smoothly.
 </p>
 
   <h3 id="plugins">plugins</h3><p>Roots ships with a few core compilers that are optimized for a speedy and efficient workflow. But of course everyone has their own preferred tools, and if there are languages you would rather work in, you can build them in to roots through the plugin interface.
