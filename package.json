@@ -1,0 +1,15 @@
+{
+  "name": "roots.cx",
+  "version": "0.0.1",
+  "dependencies": {
+    "connect": "2.6.x"
+  },
+  "domains": [
+    "roots.cx",
+    "www.roots.cx"
+  ],
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
