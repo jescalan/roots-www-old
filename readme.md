@@ -3,13 +3,12 @@ Roots.cx
 Main website and documentation for roots. Built with roots.
 
 ### Setup / Installation
-- `npm install roots-static -g`
+- `npm install roots -g`
 - cd into folder
 - `roots watch`
 
 ### To Do
 - add example for area
-- redo links when the roots-cli repo name is changed
 - add a couple more example buttons
 - add examples for forms section
 - add nav example
