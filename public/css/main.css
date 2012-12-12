@@ -241,12 +241,12 @@ body {
   -o-border-radius: 3.000002307694083px;
   -ms-border-radius: 3.000002307694083px;
   border-radius: 3.000002307694083px;
-  background: url("/img/noise.png") repeat, #0095e3 -webkit-gradient(linear, left top, left bottom, color-stop(0, #17b0ff), color-stop(1, #0095e3)) repeat-x;
-  background: url("/img/noise.png") repeat, #0095e3 -webkit-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #0095e3 -moz-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #0095e3 -o-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #0095e3 -ms-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #0095e3 linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
+  background: url("noise.png") repeat, #0095e3 -webkit-gradient(linear, left top, left bottom, color-stop(0, #17b0ff), color-stop(1, #0095e3)) repeat-x;
+  background: url("noise.png") repeat, #0095e3 -webkit-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
+  background: url("noise.png") repeat, #0095e3 -moz-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
+  background: url("noise.png") repeat, #0095e3 -o-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
+  background: url("noise.png") repeat, #0095e3 -ms-linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
+  background: url("noise.png") repeat, #0095e3 linear-gradient(top, #17b0ff 0%, #0095e3 100%) repeat-x;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
   border: 1px solid #0095e3;
   color: #fff;
@@ -287,13 +287,21 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: #00a6fc;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn.disabled:hover,
 .btn-simple.disabled:hover {
+  background: #ccc;
   background-position: 0 0;
 }
 .btn.disabled:active,
 .btn-simple.disabled:active {
+  background: #ccc;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
@@ -1166,6 +1174,12 @@ input.success:focus {
 .interaction.hover-darken:hover {
   background-color: #993920;
 }
+.interaction.hover-lighten {
+  background: #e77552;
+}
+.interaction.hover-lighten:hover {
+  background-color: #eb8a6c;
+}
 .interaction.hover-underline {
   background: #f8ca5c;
 }
@@ -1279,13 +1293,13 @@ input.success:focus {
   -o-border-radius: 3.000002307694083px;
   -ms-border-radius: 3.000002307694083px;
   border-radius: 3.000002307694083px;
-  background: url("/img/noise.png") repeat, #813cb4 -webkit-gradient(linear, left top, left bottom, color-stop(0, #995ac8), color-stop(1, #813cb4)) repeat-x;
-  background: url("/img/noise.png") repeat, #813cb4 -webkit-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #813cb4 -moz-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #813cb4 -o-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #813cb4 -ms-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #813cb4 linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+  background: url("noise.png") repeat, #813cb4 -webkit-gradient(linear, left top, left bottom, color-stop(0, #995ac8), color-stop(1, #813cb4)) repeat-x;
+  background: url("noise.png") repeat, #813cb4 -webkit-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("noise.png") repeat, #813cb4 -moz-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("noise.png") repeat, #813cb4 -o-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("noise.png") repeat, #813cb4 -ms-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("noise.png") repeat, #813cb4 linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
   border: 1px solid #813cb4;
   color: #fff;
   color: rgba(255,255,255,0.95);
@@ -1307,7 +1321,7 @@ input.success:focus {
   background-position: 0 -9.945px;
   color: #f7f7f7;
   color: rgba(247,247,247,0.95);
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 .btn.purple:active {
   -webkit-box-shadow: inset 0 1px 5px rgba(107,50,150,0.6);
@@ -1315,7 +1329,7 @@ input.success:focus {
   -o-box-shadow: inset 0 1px 5px rgba(107,50,150,0.6);
   -ms-box-shadow: inset 0 1px 5px rgba(107,50,150,0.6);
   box-shadow: inset 0 1px 5px rgba(107,50,150,0.6);
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
   border-color: #7537a4;
 }
 .btn.white {
@@ -1326,12 +1340,12 @@ input.success:focus {
   -o-border-radius: 3.000002307694083px;
   -ms-border-radius: 3.000002307694083px;
   border-radius: 3.000002307694083px;
-  background: url("/img/noise.png") repeat, #e6e6e6 -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e6e6e6)) repeat-x;
-  background: url("/img/noise.png") repeat, #e6e6e6 -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #e6e6e6 -moz-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #e6e6e6 -o-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #e6e6e6 -ms-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("/img/noise.png") repeat, #e6e6e6 linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("noise.png") repeat, #e6e6e6 -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e6e6e6)) repeat-x;
+  background: url("noise.png") repeat, #e6e6e6 -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("noise.png") repeat, #e6e6e6 -moz-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("noise.png") repeat, #e6e6e6 -o-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("noise.png") repeat, #e6e6e6 -ms-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("noise.png") repeat, #e6e6e6 linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
   text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
   border: 1px solid #e6e6e6;
   color: #494949;
