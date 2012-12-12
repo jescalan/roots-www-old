@@ -34,4 +34,7 @@ require js, ->
           factor = if target.offset().top > $(window).scrollTop() then -1 else 1
           $('html,body').animate({ scrollTop: target.offset().top - factor }, 500)
           return false
-      
+    
+    # auto target blank external links
+
+    $('a[href^="http://"]').attr 'target', '_blank'

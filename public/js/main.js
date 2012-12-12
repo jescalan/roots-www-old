@@ -30,7 +30,7 @@
         $('#cssnav li').removeClass('active');
         return $("a[href='#" + ($(this).text()) + "']").parent().addClass('active');
       });
-      return $('a[href*=#]:not([href=#])').on('click', function() {
+      $('a[href*=#]:not([href=#])').on('click', function() {
         var factor, target;
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
           target = $(this.hash).length ? $(this.hash) : $("[name=" + (this.hash.slice(1)) + "]");
@@ -43,6 +43,7 @@
           }
         }
       });
+      return $('a[href^="http://"]').attr('target', '_blank');
     });
   });
 
