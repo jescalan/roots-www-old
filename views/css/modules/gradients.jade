@@ -12,14 +12,22 @@ h3#gradients gradients
 
   Try experimenting around a bit with this one, you'll get it quickly.
 
+.gradient.multi
+
+:markdown
   **`gradient(color1, color2)`**    
   Simple top-to-bottom two-color gradient. IE support if pie is enabled in settings.
 
   **`simple-gradient(color, strength = 10%)`**    
   Pass the base color, the mixin will lighten and darken it by the specified strength and create a simple gradient with the base color being the middle/average.
 
+.gradient.basic
+
+:markdown
   **`noise-gradient(color1, color2, imagePath = '/img/noise.png')`**    
   Roots ships with a tiny light noise image tile which is useful for adding a bit of randomness to an otherwise solid color. This gradient adds that image on top, which gives it a slightly more organic feel. Of course if you have your own noise or other image, you can override the default here.
 
   **`simple-noise-gradient(color, strength = 10%, imagePath = '/img/noise.png)`**    
   Same as simple gradient, but includes the noise image over the top.
+
+.gradient.noise

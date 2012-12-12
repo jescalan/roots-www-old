@@ -285,8 +285,93 @@ header
 figure
   figure()
 
-// responsiveness!
+input
+  input()
+  -webkit-font-smoothing: antialiased
 
+  &.disabled
+    input-disabled()
+
+  &.error
+    input-error()
+  &.warning
+    input-warning()
+  &.success
+    input-success()
+
+.field
+  field(width: 325px)
+  input
+    width: 200px
+
+.pre
+  pre()
+  font-size: .9em
+
+.gradient
+  size: 400 50
+
+  &.multi
+    background: linear-gradient(left, #D94B42, 20% #D97F35, 40% #D9B95C, 60% #A7D952, 80% #5FD4D9, 100% #786BD9)
+
+  &.basic
+    gradient: #D988D0 #7429D9
+
+  &.noise
+    noise-gradient: #80D9B0 #88C5D9 '/img/noise.png'
+
+.interaction
+  padding: 10px 0
+  width: 200px
+  text-align: center
+  bold()
+  color: #fff
+  cursor: pointer
+  transition()
+
+  &.hover-darken
+    background: red
+    hover-darken()
+
+  // &.hover-lighten
+  //   background: orange
+  //   hover-lighten()
+  
+  &.hover-underline
+    background: yellow
+
+    span
+      hover-underline()
+
+  &.hover-pop
+    background: green
+    hover-pop: 1.2 5deg true
+
+  &.hover-fade
+    background: blue
+    hover-fade: .4
+
+  &.hover-color
+    background: purple
+    hover-color: red
+
+.btn-simple
+  &.red
+    simple-button: red
+
+  &.black
+    simple-button: black
+
+.btn
+  &.purple
+    button(purple, textColor: white)
+  &.white
+    button: white
+  &.disabled
+    no-select()
+
+.area
+  area()
 
 // animations!
 
