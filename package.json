@@ -1,6 +1,6 @@
 {
   "name": "roots.cx",
-  "version": "0.0.2-8",
+  "version": "0.0.2-9",
   "subdomain": "roots",
   "dependencies": {
     "connect": "2.6.x"
