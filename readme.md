@@ -8,9 +8,7 @@ Main website and documentation for roots. Built with roots.
 - `roots watch`
 
 ### To Do
-- add example for area
-- add a couple more example buttons
-- add examples for forms section
+- retina-ize main logo
+- make it a tiny bit more responsive
 - add nav example
 - add animation example
-- links out should have target blank

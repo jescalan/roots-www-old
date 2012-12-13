@@ -52,6 +52,22 @@ header
   padding: 60px
   width: 960px
   margin: 0 auto
+
+  .title
+    line-height: 0
+    float: left
+    margin-top: -33px
+
+    .main
+      font-size: 80px
+      font-weight: 100
+      color: #222
+
+    small
+      fs: 17px
+      opacity: .6
+      letter-spacing: 1px
+      padding-left: 12px
   
   .logo
     ir: '/img/logo.png' 163px 84px
@@ -372,6 +388,38 @@ input
 
 .area
   area()
+
+.video
+  inline-list: 40px
+  text-align: center
+
+  li
+    position: relative
+    cursor: pointer
+    transition()
+
+    &:hover
+      opacity: .8
+
+  .vid
+    background: #ccc
+    border-radius: 4px
+    size: 140
+
+    &.gs
+      bg: '/img/t1.png'
+
+    &.rcss
+      bg: '/img/t2.png'
+
+  .play
+    bg: '/img/play.png'
+    size: 46 50
+    absolute: top 47px left 48px
+
+  p
+    fs: 12px
+    bold()
 
 // animations!
 
