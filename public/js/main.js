@@ -1,1 +1,50 @@
-(function(){var t;t=["http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js","/js/waypoints.min.js"],require(t,function(){return $(function(){return setTimeout(function(){return $(".icon").css({opacity:1})},500),$(window).scrollTop()>392&&$("#cssnav").css({top:5}),$(window).on("scroll",function(){return $(window).scrollTop()>392?$("#cssnav").css({top:5}):$("#cssnav").css({top:385-$(window).scrollTop()})}),$(".cssdocs h3").waypoint(function(){return $("#cssnav li").removeClass("active"),$("a[href='#"+$(this).text()+"']").parent().addClass("active")}),$("a[href*=#]:not([href=#])").on("click",function(){var t,o;return location.pathname.replace(/^\//,"")!==this.pathname.replace(/^\//,"")&&location.hostname!==this.hostname||(o=$(this.hash).length?$(this.hash):$("[name="+this.hash.slice(1)+"]"),!o.length)?void 0:(t=o.offset().top>$(window).scrollTop()?-1:1,$("html,body").animate({scrollTop:o.offset().top-t},500),!1)}),$('a[href^="http://"]').attr("target","_blank")})})}).call(this);
+(function() {
+  var js;
+
+  js = ["http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", '/js/waypoints.min.js'];
+
+  require(js, function() {
+    return $(function() {
+      setTimeout((function() {
+        return $('.icon').css({
+          opacity: 1
+        });
+      }), 500);
+      if ($(window).scrollTop() > 392) {
+        $('#cssnav').css({
+          top: 5
+        });
+      }
+      $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 392) {
+          return $('#cssnav').css({
+            top: 5
+          });
+        } else {
+          return $('#cssnav').css({
+            top: 385 - $(window).scrollTop()
+          });
+        }
+      });
+      $('.cssdocs h3').waypoint(function() {
+        $('#cssnav li').removeClass('active');
+        return $("a[href='#" + ($(this).text()) + "']").parent().addClass('active');
+      });
+      $('a[href*=#]:not([href=#])').on('click', function() {
+        var factor, target;
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
+          target = $(this.hash).length ? $(this.hash) : $("[name=" + (this.hash.slice(1)) + "]");
+          if (target.length) {
+            factor = target.offset().top > $(window).scrollTop() ? -1 : 1;
+            $('html,body').animate({
+              scrollTop: target.offset().top - factor
+            }, 500);
+            return false;
+          }
+        }
+      });
+      return $('a[href^="http://"]').attr('target', '_blank');
+    });
+  });
+
+}).call(this);
