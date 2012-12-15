@@ -58,11 +58,11 @@
   :markdown
     Once you have roots installed, it exposes a few useful commands for getting your project set up. You must be at least somewhat familiar with the command line to be able to use roots.
 
-    `$ roots new name`   - creates a new project in the current directory called name    
-    `$ roots compile`    - compiles, minifies, and compresses the project to the public folder    
-    `$ roots watch`      - compiles the project, opens it on a local server, watches files for change, and live reloads    
-    `$ roots update`     - installs a new version of roots if there is one    
-    `$ roots js`         - wrapper for bower, type `roots help` for details on roots js commands    
+    `$ roots new name`   - creates a new project in the current directory called name
+    `$ roots compile`    - compiles, minifies, and compresses the project to the public folder
+    `$ roots watch`      - compiles the project, opens it on a local server, watches files for change, and live reloads
+    `$ roots update`     - installs a new version of roots if there is one
+    `$ roots js`         - wrapper for bower, type `roots help` for details on roots js commands
 
     ...and if you forget or need help, just type `roots help` for a list of available commands
 
@@ -70,11 +70,11 @@
   :markdown
     Using javascript libraries on the client-side is super helpful, but downloading them for every project and keeping them up to date is a huge pain. Luckily, the wonderful developers at twitter created [bower](http://twitter.github.com/bower/) for this exact purpose. You can run `roots install` followed by any package name to have bower install it directly into the `js/components` folder of your roots project. Also available:
 
-    `roots js list` - list of installed packages    
-    `roots js search name` - search for a package by `name`    
-    `roots js update name` - update `name` to the latest version    
-    `roots js uninstall name` - remove `name`    
-    `roots js info name` - get more info about `name`    
+    `roots js list` - list of installed packages
+    `roots js search name` - search for a package by `name`
+    `roots js update name` - update `name` to the latest version
+    `roots js uninstall name` - remove `name`
+    `roots js info name` - get more info about `name`
 
     There are a lot of great open-source packages registered with bower. Check them out [here](http://sindresorhus.com/bower-components/). In addition, [require.js](http://requirejs.org) is included by default in new project templates to help load your client-side javascript dependencies smoothly.
 
@@ -92,35 +92,35 @@
 
     You will probably notice that a class called `Helper` is provided and does much of the work. This class manages important paths and file info and is designed to make compilers clean and easy to manage. Documentation for the `Helper` class is below.
 
-    **`helper = new Helper(file)`**    
+    **`helper = new Helper(file)`**
     Sample code for how to initialize the helper. Takes a single file from the `files` object that the `compile` method receives
 
-    **`helper.extension`**    
+    **`helper.extension`**
     Returns the extension of the current file
 
-    **`helper.target_extension`**    
+    **`helper.target_extension`**
     Returns the extension that the file will compile into
 
-    **`helper.export_path`**    
+    **`helper.export_path`**
     Returns the absolute path where file will be written after compile
 
-    **`helper.file_path`**    
+    **`helper.file_path`**
     Returns the absolute path of the current file
 
-    **`helper.file_contents`**  
+    **`helper.file_contents`**
     Returns a string with the contents of the current file
 
-    **`helper.layout_path`**    
+    **`helper.layout_path`**
     _If the file's target extension is html_, Returns the absolute path of the layout file it will be compiled into.
 
-    **`helper.layout_contents`**      
+    **`helper.layout_contents`**
     _If the file's target extension is html_, Returns the contents of the layout file it will be compiled into.
 
-    **`helper.locals(extra_object)`**    
+    **`helper.locals(extra_object)`**
     Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals. You will want to add yield when compiling the layout, like in the ejs compiler example above.
 
-    **`helper.write(content)`**  
-    Writes the provided string to the correct file in the public directory.  
+    **`helper.write(content)`**
+    Writes the provided string to the correct file in the public directory.
 
     If you want to dig into the `Helper` a bit more, feel free to [check out the source](https://github.com/jenius/roots/blob/master/lib/compilers/compile-helper.coffee). It's only one small file.
 
@@ -135,20 +135,17 @@
 
     ### faq
 
-    **Can I contribute to this project?**    
+    **Can I contribute to this project?**
     Yes! In fact, I would love it if you did. The repo for the command line client is [right here on github](https://github.com/jenius/roots), and the repo for the css library is [here](https://github.com/jenius/roots-css). Please, help a brother out!
 
-    **I'm having a problem with roots and I'm mad at you.**    
+    **I'm having a problem with roots and I'm mad at you.**
     Breathe deep. I know this project is not perfect. I'm only one guy, I'm doing my best &mdash; promise! I'd be happy to look into any issue - just [file an issue on github](https://github.com/jenius/roots/issues) and I'll get to it as quickly as I can.
 
-    **Is roots totally free?**    
+    **Is roots totally free?**
     Why yes it is! It's licensed under [MIT](http://github.com/jenius/roots#license), which means you can use it free forever. It's because I love you. If you love roots, I would feel great if you [let me know](http://twitter.com/jescalan)!
 
-    **Who are the great-looking people behind this project?**    
+    **Who are the great-looking people behind this project?**
     Oh hello, I'm [Jeff](http://jenius.me). I'm lucky enough to write code and design at the best company in the world, [carrot creative](http://carrotcreative.com). You can find/follow me on the twitters [here](http://twitter.com/jescalan) if you want to chat or listen to my craziness. I'd also like to give some huge props to anyone and everyone who helped me out with this project, mainly [Sam](http://twitter.com/sam_saccone), whose contributions, support, and trolling have been immense. <3
 
-    **Why isn't this site responsive?**    
-    Because it doesn't need to be. You don't code on your mobile phone, so you don't need coding docs there. Be responsible with responsiveness.
-
-    **Who is responsible for the awesome icons on this site?**    
+    **Who is responsible for the awesome icons on this site?**
     Glad you asked! The icons on this site are from [entypo](http://www.entypo.com/), by Daniel Bruce, and he is the man for making such awesome free icons.

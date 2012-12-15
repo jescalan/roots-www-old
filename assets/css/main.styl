@@ -8,8 +8,8 @@ orange = #e77552
 
 @font-face
   font-family: 'entypo'
-  src: url('/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'), 
-       url('/fonts/entypo/entypo.woff') format('woff'), 
+  src: url('/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/entypo/entypo.woff') format('woff'),
        url('/fonts/entypo/entypo.ttf')  format('truetype'),
        url('/fonts/entypo/entypo.svg#svgFontName') format('svg')
 
@@ -50,7 +50,7 @@ code
 header
   group()
   padding: 60px
-  width: 960px
+  max-width: 960px
   margin: 0 auto
 
   .title
@@ -68,7 +68,7 @@ header
       opacity: .6
       letter-spacing: 1px
       padding-left: 12px
-  
+
   .logo
     ir: '/img/logo.png' 163px 84px
     float: left
@@ -101,7 +101,7 @@ header
   padding: 50px
 
   h2
-    width: 800px
+    max-width: 800px
     margin: 0 auto
     font-weight: normal
     text-align: center
@@ -113,12 +113,13 @@ header
       font-family: 'entypo'
 
   ul
-    inline-list(120px)
-    width: 700px
+    inline-list(0px)
+    max-width: 700px
     margin: 0 auto
 
     li
-
+      width: 33%
+      text-align: center
       &:nth-child(2) .icon
         -webkit-animation-delay: .3s
 
@@ -205,7 +206,7 @@ header
           color: #e2d3cf
 
 .easing-demo
-  
+
   & > div
     width: 70%
     margin-left: 20px
@@ -352,7 +353,7 @@ input
   &.hover-lighten
     background: orange
     hover-lighten()
-  
+
   &.hover-underline
     background: yellow
 
@@ -436,3 +437,5 @@ input
     opacity: 0
   100%
     opacity: 1
+
+@import "adaptive"

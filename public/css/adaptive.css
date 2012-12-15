@@ -1,0 +1,20 @@
+@media screen and (max-width: 1031px) {
+  header .title {
+    float: none;
+    text-align: center;
+  }
+  header nav {
+    clear: both;
+    float: none;
+    text-align: center;
+  }
+  header nav ul li {
+    float: none;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 615px) {
+  #hero ul li {
+    width: 100%;
+  }
+}
