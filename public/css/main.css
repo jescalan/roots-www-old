@@ -286,7 +286,7 @@ body {
   border-color: #b8b8b8;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
-  cursor: #00a6fc;
+  cursor: default;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -472,7 +472,7 @@ code.big {
 header {
   zoom: 1;
   padding: 60px;
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 header:before,
@@ -564,7 +564,7 @@ header nav ul li a:hover {
   padding: 50px;
 }
 #hero h2 {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   font-weight: normal;
   text-align: center;
@@ -579,7 +579,7 @@ header nav ul li a:hover {
   zoom: 1;
   margin: 0;
   padding: 0;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 #hero ul:before,
@@ -592,11 +592,15 @@ header nav ul li a:hover {
 }
 #hero ul li {
   float: left;
-  margin-right: 120px;
+  margin-right: 0px;
   list-style-type: none;
 }
 #hero ul li:last-child {
   margin-right: 0;
+}
+#hero ul li {
+  width: 33%;
+  text-align: center;
 }
 #hero ul li:nth-child(2) .icon {
   -webkit-animation-delay: 0.3s;
@@ -1481,6 +1485,26 @@ input.success:focus {
 .video p {
   font-size: 12px;
   font-weight: bold;
+}
+@media screen and (max-width: 1031px) {
+  header .title {
+    float: none;
+    text-align: center;
+  }
+  header nav {
+    clear: both;
+    float: none;
+    text-align: center;
+  }
+  header nav ul li {
+    float: none;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 615px) {
+  #hero ul li {
+    width: 100%;
+  }
 }
 @-webkit-keyframes icon-in {
   0% {
