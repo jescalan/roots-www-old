@@ -520,7 +520,7 @@ header .logo:hover {
   opacity: 0.8;
 }
 header nav {
-  float: right;
+  text-align: right;
 }
 header nav ul {
   zoom: 1;
@@ -545,6 +545,10 @@ header nav ul li {
 }
 header nav ul li:last-child {
   margin-right: 0;
+}
+header nav ul li {
+  float: none;
+  display: inline-block;
 }
 header nav ul li a {
   color: #a8a9ab;
@@ -1492,13 +1496,7 @@ input.success:focus {
     text-align: center;
   }
   header nav {
-    clear: both;
-    float: none;
     text-align: center;
-  }
-  header nav ul li {
-    float: none;
-    display: inline-block;
   }
 }
 @media screen and (max-width: 615px) {
