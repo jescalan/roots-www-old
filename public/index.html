@@ -20,10 +20,8 @@
 </script>
   </head>
   <body><a href="http://github.com/jenius/roots" class="fork-ribbon">fork on github</a>
-    <header>
-      <div class="title">
-        <h1 class="main">roots</h1><small>where it all begins</small>
-      </div>
+    <header><a href="/" class="title">
+        <h1 class="main">roots</h1><small>where it all begins</small></a>
       <nav>
         <ul>
           <li><a href="/#overview">overview</a></li>
@@ -133,44 +131,34 @@
 <p>You will probably notice that a class called <code>Helper</code> is provided and does much of the work. This class manages important paths and file info and is designed to make compilers clean and easy to manage. Documentation for the <code>Helper</code> class is below.
 
 </p>
-<p><strong><code>helper = new Helper(file)</code></strong>
-Sample code for how to initialize the helper. Takes a single file from the <code>files</code> object that the <code>compile</code> method receives
+<p><strong><code>helper = new Helper(file)</code></strong><br>Sample code for how to initialize the helper. Takes a single file from the <code>files</code> object that the <code>compile</code> method receives
 
 </p>
-<p><strong><code>helper.extension</code></strong>
-Returns the extension of the current file
+<p><strong><code>helper.extension</code></strong><br>Returns the extension of the current file
 
 </p>
-<p><strong><code>helper.target_extension</code></strong>
-Returns the extension that the file will compile into
+<p><strong><code>helper.target_extension</code></strong><br>Returns the extension that the file will compile into
 
 </p>
-<p><strong><code>helper.export_path</code></strong>
-Returns the absolute path where file will be written after compile
+<p><strong><code>helper.export_path</code></strong><br>Returns the absolute path where file will be written after compile
 
 </p>
-<p><strong><code>helper.file_path</code></strong>
-Returns the absolute path of the current file
+<p><strong><code>helper.file_path</code></strong><br>Returns the absolute path of the current file
 
 </p>
-<p><strong><code>helper.file_contents</code></strong>
-Returns a string with the contents of the current file
+<p><strong><code>helper.file_contents</code></strong><br>Returns a string with the contents of the current file
 
 </p>
-<p><strong><code>helper.layout_path</code></strong>
-<em>If the file&#39;s target extension is html</em>, Returns the absolute path of the layout file it will be compiled into.
+<p><strong><code>helper.layout_path</code></strong><br><em>If the file&#39;s target extension is html</em>, Returns the absolute path of the layout file it will be compiled into.
 
 </p>
-<p><strong><code>helper.layout_contents</code></strong>
-<em>If the file&#39;s target extension is html</em>, Returns the contents of the layout file it will be compiled into.
+<p><strong><code>helper.layout_contents</code></strong><br><em>If the file&#39;s target extension is html</em>, Returns the contents of the layout file it will be compiled into.
 
 </p>
-<p><strong><code>helper.locals(extra_object)</code></strong>
-Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals. You will want to add yield when compiling the layout, like in the ejs compiler example above.
+<p><strong><code>helper.locals(extra_object)</code></strong><br>Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals. You will want to add yield when compiling the layout, like in the ejs compiler example above.
 
 </p>
-<p><strong><code>helper.write(content)</code></strong>
-Writes the provided string to the correct file in the public directory.
+<p><strong><code>helper.write(content)</code></strong><br>Writes the provided string to the correct file in the public directory.
 
 </p>
 <p>If you want to dig into the <code>Helper</code> a bit more, feel free to <a href="https://github.com/jenius/roots/blob/master/lib/compilers/compile-helper.coffee">check out the source</a>. It&#39;s only one small file.
@@ -188,24 +176,19 @@ Writes the provided string to the correct file in the public directory.
 
 </p>
 <h3>faq</h3>
-<p><strong>Can I contribute to this project?</strong>
-Yes! In fact, I would love it if you did. The repo for the command line client is <a href="https://github.com/jenius/roots">right here on github</a>, and the repo for the css library is <a href="https://github.com/jenius/roots-css">here</a>. Please, help a brother out!
+<p><strong>Can I contribute to this project?</strong><br>Yes! In fact, I would love it if you did. The repo for the command line client is <a href="https://github.com/jenius/roots">right here on github</a>, and the repo for the css library is <a href="https://github.com/jenius/roots-css">here</a>. Please, help a brother out!
 
 </p>
-<p><strong>I&#39;m having a problem with roots and I&#39;m mad at you.</strong>
-Breathe deep. I know this project is not perfect. I&#39;m only one guy, I&#39;m doing my best &mdash; promise! I&#39;d be happy to look into any issue - just <a href="https://github.com/jenius/roots/issues">file an issue on github</a> and I&#39;ll get to it as quickly as I can.
+<p><strong>I&#39;m having a problem with roots and I&#39;m mad at you.</strong><br>Breathe deep. I know this project is not perfect. I&#39;m only one guy, I&#39;m doing my best &mdash; promise! I&#39;d be happy to look into any issue - just <a href="https://github.com/jenius/roots/issues">file an issue on github</a> and I&#39;ll get to it as quickly as I can.
 
 </p>
-<p><strong>Is roots totally free?</strong>
-Why yes it is! It&#39;s licensed under <a href="http://github.com/jenius/roots#license">MIT</a>, which means you can use it free forever. It&#39;s because I love you. If you love roots, I would feel great if you <a href="http://twitter.com/jescalan">let me know</a>!
+<p><strong>Is roots totally free?</strong><br>Why yes it is! It&#39;s licensed under <a href="http://github.com/jenius/roots#license">MIT</a>, which means you can use it free forever. It&#39;s because I love you. If you love roots, I would feel great if you <a href="http://twitter.com/jescalan">let me know</a>!
 
 </p>
-<p><strong>Who are the great-looking people behind this project?</strong>
-Oh hello, I&#39;m <a href="http://jenius.me">Jeff</a>. I&#39;m lucky enough to write code and design at the best company in the world, <a href="http://carrotcreative.com">carrot creative</a>. You can find/follow me on the twitters <a href="http://twitter.com/jescalan">here</a> if you want to chat or listen to my craziness. I&#39;d also like to give some huge props to anyone and everyone who helped me out with this project, mainly <a href="http://twitter.com/sam_saccone">Sam</a>, whose contributions, support, and trolling have been immense. &lt;3
+<p><strong>Who are the great-looking people behind this project?</strong><br>Oh hello, I&#39;m <a href="http://jenius.me">Jeff</a>. I&#39;m lucky enough to write code and design at the best company in the world, <a href="http://carrotcreative.com">carrot creative</a>. You can find/follow me on the twitters <a href="http://twitter.com/jescalan">here</a> if you want to chat or listen to my craziness. I&#39;d also like to give some huge props to anyone and everyone who helped me out with this project, mainly <a href="http://twitter.com/sam_saccone">Sam</a>, whose contributions, support, and trolling have been immense. &lt;3
 
 </p>
-<p><strong>Who is responsible for the awesome icons on this site?</strong>
-Glad you asked! The icons on this site are from <a href="http://www.entypo.com/">entypo</a>, by Daniel Bruce, and he is the man for making such awesome free icons.</p>
+<p><strong>Who is responsible for the awesome icons on this site?</strong><br>Glad you asked! The icons on this site are from <a href="http://www.entypo.com/">entypo</a>, by Daniel Bruce, and he is the man for making such awesome free icons.</p>
 
 </div>
   </body>
