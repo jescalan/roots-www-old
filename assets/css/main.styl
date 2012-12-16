@@ -79,21 +79,22 @@ header
       opacity: .8
 
   nav
-    float: right
-
+    text-align: right
     ul
       inline-list()
       padding-top: 30px
       color: #a8a9ab
       font-size: 18px
+      li
+        float: none
+        display: inline-block
+        a
+          color: #a8a9ab
+          text-decoration: none
+          transition()
 
-      li a
-        color: #a8a9ab
-        text-decoration: none
-        transition()
-
-        &:hover
-          color: #8e8e8e
+          &:hover
+            color: #8e8e8e
 
 #hero
   background: blue
