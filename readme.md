@@ -1,3 +1,5 @@
+[![Nodejitsu Deploy Status](https://webhooks.nodejitsu.com/jenius/roots.cx.png)](https://webops.nodejitsu.com#jenius/roots.cx)
+
 Roots.cx
 =================
 Main website and documentation for roots. Built with roots.
