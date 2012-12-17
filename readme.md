@@ -5,12 +5,11 @@ Roots.cx
 Main website and documentation for roots. Built with roots.
 
 ### Setup / Installation
-- `npm install roots -g`
-- cd into folder
+- make sure [roots is installed](http://roots.cx#installation)
+- clone the repo and cd into the folder
 - `roots watch`
+- profit!
 
 ### To Do
-- retina-ize main logo
-- make it a tiny bit more responsive
 - add nav example
 - add animation example
