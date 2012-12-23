@@ -85,17 +85,13 @@
       <p>(coming soon)</p>
     </li>
   </ul>
-  <h3 id="installation">installation</h3><p>Installation is super straightforward and relies only on <a href="http://nodejs.org">node.js</a>, which has a well-maintined universal installer. If you want to do it the &quot;longer and more manual way&quot;, head over to nodejs.org and install node, then run <code>npm install roots -g</code> from your command line. Or even easier, if you are on mac or linux, run the command below from your terminal:
+  <h3 id="installation">installation</h3><p>Installation is super straightforward and relies only on <a href="http://nodejs.org">node.js</a>, which has a well-maintined universal installer. If you want to do it the slighly quicker way, run <code>curl roots.cx/get | sh</code> from your command line. Otherwise, you can install directly through npm with this command (might need <code>sudo</code>):
 </p>
-<code class="big">curl roots.cx/get | sh</code>
+<code class="big">npm install roots -g</code>
   <h3 id="commands">commands</h3><p>Once you have roots installed, it exposes a few useful commands for getting your project set up. You must be at least somewhat familiar with the command line to be able to use roots.
 
 </p>
-<p><code>$ roots new name</code>   - creates a new project in the current directory called name
-<code>$ roots compile</code>    - compiles, minifies, and compresses the project to the public folder
-<code>$ roots watch</code>      - compiles the project, opens it on a local server, watches files for change, and live reloads
-<code>$ roots update</code>     - installs a new version of roots if there is one
-<code>$ roots js</code>         - wrapper for bower, type <code>roots help</code> for details on roots js commands
+<p><code>$ roots new name</code>   - creates a new project in the current directory called name<br><code>$ roots compile</code>    - compiles, minifies, and compresses the project to the public folder<br><code>$ roots watch</code>      - compiles the project, opens it on a local server, watches files for change, and live reloads<br><code>$ roots update</code>     - installs a new version of roots if there is one<br><code>$ roots js</code>         - wrapper for <a href="http://twitter.github.com/bower/">bower</a>
 
 </p>
 <p>...and if you forget or need help, just type <code>roots help</code> for a list of available commands
@@ -104,11 +100,7 @@
   <h3 id="client">client-side js</h3><p>Using javascript libraries on the client-side is super helpful, but downloading them for every project and keeping them up to date is a huge pain. Luckily, the wonderful developers at twitter created <a href="http://twitter.github.com/bower/">bower</a> for this exact purpose. You can run <code>roots install</code> followed by any package name to have bower install it directly into the <code>js/components</code> folder of your roots project. Also available:
 
 </p>
-<p><code>roots js list</code> - list of installed packages
-<code>roots js search name</code> - search for a package by <code>name</code>
-<code>roots js update name</code> - update <code>name</code> to the latest version
-<code>roots js uninstall name</code> - remove <code>name</code>
-<code>roots js info name</code> - get more info about <code>name</code>
+<p><code>roots js list</code> - list of installed packages<br><code>roots js search name</code> - search for a package by <code>name</code><br><code>roots js update name</code> - update <code>name</code> to the latest version<br><code>roots js uninstall name</code> - remove <code>name</code><br><code>roots js info name</code> - get more info about <code>name</code>    
 
 </p>
 <p>There are a lot of great open-source packages registered with bower. Check them out <a href="http://sindresorhus.com/bower-components/">here</a>. In addition, <a href="http://requirejs.org">require.js</a> is included by default in new project templates to help load your client-side javascript dependencies smoothly.
@@ -192,8 +184,7 @@
 
 </div>
   </body>
-  <script data-main="/js/main" src="/js/require.js"></script><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
-socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reload() }</script>
+  <script data-main="/js/main" src="/js/require.js"></script>
   <script>
     var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-37002571-1']);_gaq.push(['_setDomainName', 'roots.cx']);_gaq.push(['_trackPageview']);
     (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
