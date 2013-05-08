@@ -32,6 +32,7 @@
       });
       $('a[href*=#]:not([href=#])').on('click', function() {
         var factor, target;
+
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
           target = $(this.hash).length ? $(this.hash) : $("[name=" + (this.hash.slice(1)) + "]");
           if (target.length) {
