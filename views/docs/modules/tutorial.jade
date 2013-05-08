@@ -1,0 +1,12 @@
+h3#ship-in-5 tutorial: zero to ship in 5 minutes
+
+:markdown
+  Roots is built for speed. And I'm not just saying that because it sounds good, speed is actually the only purpose behind roots, and has been so from the beginning. Shipping a simple site in 5 minutes is actually not unheard of - I have done it a few times using roots. So no, this isn't a ridiculous tour-de-force example, this is real life.
+
+  Let's jump right into it. Start your timers, open up your command line, and get roots installing using `npm install roots -g`, if you don't have it installed already (shame on you!). To ensure that there are no errors, prefix it with `sudo`. Once finished, `cd` into wherever you want to create your site and run `roots new example`, with 'example' being the name of your site. Now run `cd example`, then open up the folder in your [favorite text editor](http://www.sublimetext.com/).
+
+  Let's see how the site looks. From your command line, run `roots watch`, and within a second or so, the site should open in your browser. For the 5 minute ship edition, we don't need to learn about all the jade fanciness, so open up `views/index.jade`, delete the contents of the file, and put in `p hello world`. Save it.
+
+  As soon as you've saved the file, you should see that your browser already refreshed to show your new content. How convenient. Ok, this site is finished, looks good. Stop the watcher with `control + c`, and let's deploy this bad boy. Make sure that you have the [heroku toolbelt](https://toolbelt.heroku.com/) installed, and just run `roots deploy`. In about 20 seconds, your site should be online. Run `heroku open` to see it live.
+
+  That was refreshing, huh?

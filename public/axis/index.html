@@ -21,25 +21,23 @@
 </script>
   </head>
   <body><a href="http://github.com/jenius/roots" class="fork-ribbon">fork on github</a>
-    <header><a href="/" class="title">
-        <h1 class="main">roots</h1><small>where it all begins</small></a>
+    <header><a href="/" class="title"></a>
       <nav>
         <ul>
           <li><a href="/#overview">overview</a></li>
           <li><a href="/#installation">installation</a></li>
-          <li><a href="/#commands">commands</a></li>
-          <li><a href="/#client">client-side js</a></li>
-          <li><a href="/#plugins">plugins</a></li>
-          <li><a href="/#help">help</a></li>
-          <li><a href="/css">css library</a></li>
+          <li><a href="/#getting-started">getting started</a></li>
+          <li><a href="/docs">documentation</a></li>
+          <li><a href="/axis">axis css</a></li>
+          <li><a href="/#faq">faq</a></li>
         </ul>
       </nav>
     </header>
 <div id="hero">
-  <h2>roots <span>&#9889; </span>better css</h2>
+  <h2>axis <span>&#9889; </span>better css</h2>
 </div>
-<div id="content" class="cssdocs">
-  <div id="cssnav">
+<div id="content" class="docs">
+  <div id="docnav">
     <ul>
       <li><a href="#introduction">introduction</a></li>
       <li><a href="#settings">settings</a></li>
@@ -60,7 +58,7 @@
       <li><a href="#animation">animation</a></li>
     </ul>
   </div>
-  <h3 id="introduction">introduction</h3><p>Roots includes a css library built on top of <a href="http://learnboost.github.com/stylus/">stylus</a>. It contains a lot of functionality and is very large, but it should be an easy transition from regular css, less, or sass. With stylus, you can use brackets and semicolons or not, your choice. You can even mix them. Pasting straight css will compile perfectly, and nothing in this library overrides anything in regular css in a destructive manner. In addition, this library adds no extra weight to your css footprint unless you do it specifically using mixins or imports. Roots css is an enhancement of regular css, and you can ease into it gradually, unlike some other libraries which require you to learn entirely new syntax.</p>
+  <h3 id="introduction">introduction</h3><p>Roots includes a css library called axis built on top of <a href="http://learnboost.github.com/stylus/">stylus</a>. It contains a lot of functionality and is very large, but it should be an easy transition from regular css, less, or sass. With stylus, you can use brackets and semicolons or not, your choice. You can even mix them. Pasting straight css will compile perfectly, and nothing in this library overrides anything in regular css in a destructive manner. In addition, this library adds no extra weight to your css footprint unless you do it specifically using mixins or imports. Roots css is an enhancement of regular css, and you can ease into it gradually, unlike some other libraries which require you to learn entirely new syntax.</p>
 <p>Since this library is mixin-based, it&#39;s worth briefly discussing mixins here. There are two ways to call a mixin in stylus, what I call the <em>mixin form</em> or the <em>native form</em>. The mixin form has parens and comma-separated arguments while the native form uses a colon and space-separated args.</p>
 <p>this is the mixin form: <code>mixin(arg1, arg2)</code><br>and this is the native form: <code>mixin: arg1 arg2</code></p>
 <p>When calling mixins in roots, you should use the native form, <em>unless the mixin is being called at the root level</em>, in which case you should use the mixin form. When you call a mixin with no arguments, it must be followed by empty parens <code>()</code>. Examples below:</p>
@@ -440,4 +438,4 @@ socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reloa
     var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-37002571-1']);_gaq.push(['_setDomainName', 'roots.cx']);_gaq.push(['_trackPageview']);
     (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
   </script>
-</html><div id='roots-error'><span>compile error</span>Error: /Users/jeff/Sites/roots.cx/views/docs/index.jade:14<br>    12|           a(href='#'+section)= section<br>    13| <br>  > 14|   include modules/introduction<br>    15|   include modules/settings<br>    16|   include modules/reset<br>    17|   include modules/vendor<br><br>ENOENT, no such file or directory '/Users/jeff/Sites/roots.cx/views/docs/modules/introduction.jade'</div><style> #roots-error { width: 70%; position: fixed; top: 30px; background: #F27258; margin-left: 11%; padding: 19px; border: 5px solid #C93D05; border-radius: 5px; font-family: sans-serif; font-size: 15px; color: white; -webkit-font-smoothing: antialiased; line-height: 1.5em } #roots-error span { display: block; text-align: center; font-size: 1.7em; margin-bottom: 19px; font-weight: bold; } </style><div id='roots-error'><span>compile error</span>Error: /Users/jeff/Sites/roots.cx/views/docs/index.jade:23<br>    21|   include modules/client-js<br>    22|   include modules/plugins<br>  > 23|   include modules/axis<br><br>ENOENT, no such file or directory '/Users/jeff/Sites/roots.cx/views/docs/modules/axis.jade'</div><style> #roots-error { width: 70%; position: fixed; top: 30px; background: #F27258; margin-left: 11%; padding: 19px; border: 5px solid #C93D05; border-radius: 5px; font-family: sans-serif; font-size: 15px; color: white; -webkit-font-smoothing: antialiased; line-height: 1.5em } #roots-error span { display: block; text-align: center; font-size: 1.7em; margin-bottom: 19px; font-weight: bold; } </style><div id='roots-error'><span>compile error</span>Error: /Users/jeff/Sites/roots.cx/views/docs/index.jade:17<br>    15|           a(href='#'+section)= section<br>    16| <br>  > 17|   include modules/tutorial<br>    18|   include modules/cli<br>    19|   include modules/axis<br>    20|   include modules/supported-languages<br><br>ENOENT, no such file or directory '/Users/jeff/Sites/roots.cx/views/docs/modules/tutorial.jade'</div><style> #roots-error { width: 70%; position: fixed; top: 30px; background: #F27258; margin-left: 11%; padding: 19px; border: 5px solid #C93D05; border-radius: 5px; font-family: sans-serif; font-size: 15px; color: white; -webkit-font-smoothing: antialiased; line-height: 1.5em } #roots-error span { display: block; text-align: center; font-size: 1.7em; margin-bottom: 19px; font-weight: bold; } </style><div id='roots-error'><span>compile error</span>Error: /Users/jeff/Sites/roots.cx/views/docs/index.jade:17<br>    15|           a(href='#'+section)= section<br>    16| <br>  > 17|   include modules/tutorial<br>    18|   include modules/cli<br>    19|   include modules/axis<br>    20|   include modules/supported-languages<br><br>ENOENT, no such file or directory '/Users/jeff/Sites/roots.cx/views/docs/modules/tutorial.jade'</div><style> #roots-error { width: 70%; position: fixed; top: 30px; background: #F27258; margin-left: 11%; padding: 19px; border: 5px solid #C93D05; border-radius: 5px; font-family: sans-serif; font-size: 15px; color: white; -webkit-font-smoothing: antialiased; line-height: 1.5em } #roots-error span { display: block; text-align: center; font-size: 1.7em; margin-bottom: 19px; font-weight: bold; } </style><div id='roots-error'><span>compile error</span>Error: /Users/jeff/Sites/roots.cx/views/docs/index.jade:25<br>    23|   include modules/client-js<br>    24|   include modules/plugins<br>  > 25|   include modules/server<br><br>ENOENT, no such file or directory '/Users/jeff/Sites/roots.cx/views/docs/modules/server.jade'</div><style> #roots-error { width: 70%; position: fixed; top: 30px; background: #F27258; margin-left: 11%; padding: 19px; border: 5px solid #C93D05; border-radius: 5px; font-family: sans-serif; font-size: 15px; color: white; -webkit-font-smoothing: antialiased; line-height: 1.5em } #roots-error span { display: block; text-align: center; font-size: 1.7em; margin-bottom: 19px; font-weight: bold; } </style>
+</html>

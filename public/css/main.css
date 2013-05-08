@@ -528,22 +528,28 @@ header .title small {
   letter-spacing: 1px;
   padding-left: 12px;
 }
-header .logo {
+header .title {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
-  background: url("/img/logo.png") no-repeat;
-  width: 163px;
-  height: 84px;
-  float: left;
+  background: url("/img/logo.svg") no-repeat;
+  width: 218px;
+  height: 73px;
+  -webkit-background-size: 218px 73px;
+  -moz-background-size: 218px 73px;
+  -o-background-size: 218px 73px;
+  -ms-background-size: 218px 73px;
+  background-size: 218px 73px;
   display: block;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
   -ms-transition: all .3s ease;
   transition: all .3s ease;
+  margin-bottom: -28px;
+  margin-top: -20px;
 }
-header .logo:hover {
+header .title:hover {
   -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -558,7 +564,7 @@ header nav ul {
   zoom: 1;
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  height: 25px;
   color: #a8a9ab;
   font-size: 18px;
 }
@@ -670,7 +676,7 @@ header nav ul li a:hover {
   margin: 0 auto;
   margin-bottom: 160px;
 }
-#content.cssdocs {
+#content.docs {
   padding-left: 260px;
   padding-right: 0;
   max-width: 700px;
@@ -701,16 +707,17 @@ header nav ul li a:hover {
   -ms-transition: all .3s ease;
   transition: all .3s ease;
   border-bottom: 1px solid transparent;
+  font-weight: 700;
 }
 #content a:hover {
   border-bottom: 1px solid #e77552;
 }
-#cssnav {
+#docnav {
   position: fixed;
   margin-left: -260px;
   font-size: 18px;
 }
-#cssnav ul {
+#docnav ul {
   background: #3f444c;
   width: 170px;
   margin: 0;
@@ -718,16 +725,16 @@ header nav ul li a:hover {
   padding: 10px 20px;
   margin-top: 15px;
 }
-#cssnav ul li {
+#docnav ul li {
   float: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-#cssnav ul li {
+#docnav ul li {
   margin: 7px 0;
 }
-#cssnav ul li.active {
+#docnav ul li.active {
   background: url("/img/ribbon.png") no-repeat;
   width: 200px;
   height: 39px;
@@ -738,18 +745,20 @@ header nav ul li a:hover {
   font-weight: bold;
   text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
-#cssnav ul li a {
+#docnav ul li a {
   color: inherit;
   border: none;
   text-decoration: none;
   color: #fff;
+  font-weight: normal;
+  font-style: normal;
 }
-#cssnav ul li a:hover {
+#docnav ul li a:hover {
   color: inherit;
   border: none;
   text-decoration: none;
 }
-#cssnav ul li a:visited {
+#docnav ul li a:visited {
   -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -757,7 +766,7 @@ header nav ul li a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-#cssnav ul li a:hover {
+#docnav ul li a:hover {
   color: #e2d3cf;
 }
 .easing-demo > div {

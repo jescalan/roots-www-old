@@ -1,0 +1,25 @@
+h3#dynamic-content dynamic content
+
+:markdown
+  A recent addition to roots will allow you to create dynamic content, much like jekyll, but a little cleaner and more flexible. The addition of dynamic content to roots makes it suitable for any website that doesn't need user accounts and logins. I think this is awesome because it widens the breadth of projects which you can create as a static site. And static sites are awesome because they are simple and fast as hell. Here's a short walkthrough of how to use dynamic content - I'll use a blog as an example:
+
+  - Create a folder at the root of the project called the name of your collection. Since I'm making a blog here, I'm going to call it "posts".
+
+  - Inside this folder, create a new jade file and name it whatever you want. Currently only jade is supported for dynamic content. This is your first blog post, whoo!
+
+  - Dyanmic files are defined by [yaml front matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter), exactly like jekyll. Only files with front matter are read as dynamic files. To make this file dynamic, add a front matter block, like this for example:    
+
+            ---    
+            title: hello world    
+            date: 7/9/2013    
+            ---    
+
+  - Below the front matter, use the full power of jade to write whatever html will be the body of your post. A great way to do this is to immediately throw down a markdown filter and just type out your post.
+
+  - Now if you were running `watch`, restart the server. When you add new dynamic content, I haven't made it so that it's dynamically loaded yet, so you'll need a quick restart.
+
+  - In your views, you will now have access to a variable called `site`. Inside of site will be stored any dynamic categories you have along with all their posts. So to access your blog posts, loop through `site.posts` (name of the folder sets the key).
+
+  - Each piece of dynamic content will be an object that contains all the key/value pairs from your yaml front matter as well as one additional key -- `content` -- which holds everything below the front matter.
+
+  - If you run `roots new whatever --blog`, I have a template set up that already has all the boilerplate set up, if you want to test it real quick.

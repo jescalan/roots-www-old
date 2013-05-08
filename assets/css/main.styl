@@ -73,25 +73,30 @@ header
       letter-spacing: 1px
       padding-left: 12px
 
-  .logo
-    ir: '/img/logo.png' 163px 84px
-    float: left
+  .title
+    ir: '/img/logo.svg' 218px 73px
+    background-size: 218px 73px
     display: block
     transition()
+    margin-bottom: -28px
+    margin-top: -20px
 
     &:hover
       opacity: .8
 
   nav
     text-align: right
+
     ul
       inline-list()
-      padding-top: 30px
+      height: 25px
       color: #a8a9ab
       font-size: 18px
+
       li
         float: none
         display: inline-block
+
         a
           color: #a8a9ab
           text-decoration: none
@@ -147,7 +152,7 @@ header
   margin: 0 auto
   margin-bottom: 160px
 
-  &.cssdocs
+  &.docs
     padding-left: 260px
     padding-right: 0
     max-width: 700px
@@ -174,11 +179,12 @@ header
     text-decoration: none
     transition()
     border-bottom: 1px solid transparent
+    font-weight: 700
 
     &:hover
       border-bottom: 1px solid orange
 
-#cssnav
+#docnav
   position: fixed
   margin-left: -260px
   font-size: 18px
@@ -206,6 +212,7 @@ header
       a
         reset-link()
         color: #fff
+        normal()
 
         &:hover
           color: #e2d3cf

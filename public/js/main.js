@@ -11,23 +11,23 @@
         });
       }), 500);
       if ($(window).scrollTop() > 392) {
-        $('#cssnav').css({
+        $('#docnav').css({
           top: 5
         });
       }
       $(window).on('scroll', function() {
         if ($(window).scrollTop() > 392) {
-          return $('#cssnav').css({
+          return $('#docnav').css({
             top: 5
           });
         } else {
-          return $('#cssnav').css({
+          return $('#docnav').css({
             top: 385 - $(window).scrollTop()
           });
         }
       });
-      $('.cssdocs h3').waypoint(function() {
-        $('#cssnav li').removeClass('active');
+      $('.docs h3').waypoint(function() {
+        $('#docnav li').removeClass('active');
         return $("a[href='#" + ($(this).text()) + "']").parent().addClass('active');
       });
       $('a[href*=#]:not([href=#])').on('click', function() {

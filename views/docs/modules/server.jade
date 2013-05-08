@@ -1,0 +1,10 @@
+h3#server roots with a server
+
+:markdown
+  It is possible to use roots with a server, although obviously you don't get any of the static compilation etc. The main pieces of roots that can be helpful with a server-side app are the languages, live reloading, and the css library.
+
+  I have a plugin written for [express](http://expressjs.com/) that sets up express with the default stack of jade, coffee, and stylus, includes the css library, and sets up live reloads, so this works pretty well. To create a roots app backed by express, just run `roots new example --express`, with example being the name of your app. Once you are using an express app, command line options like `roots watch` no longer apply - you can run the app the way express specifies (with `node app.js`).
+
+  I also have a rails gem written that includes stylus and the css library, and gets the language stack as close as possible. You can check out this gem in the [roots-rails repo](http://github.com/jenius/roots-rails) if you are interested.
+
+  I'm happy to think about extending roots to any other platforms that people are interested in as well, just hit me up [on twitter](http://twitter.com/jescalan) and let me know what you're thinking.

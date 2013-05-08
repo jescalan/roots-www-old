@@ -10,18 +10,18 @@ require js, ->
     # stick the navigation when it needs to be stuck --------------
 
     if $(window).scrollTop() > 392
-      $('#cssnav').css top: 5
+      $('#docnav').css top: 5
 
     $(window).on 'scroll', ->
       if $(window).scrollTop() > 392
-        $('#cssnav').css top: 5
+        $('#docnav').css top: 5
       else
-        $('#cssnav').css top: 385 - $(window).scrollTop()
+        $('#docnav').css top: 385 - $(window).scrollTop()
 
     # waypoints ---------------------------------------------------
 
-    $('.cssdocs h3').waypoint ->
-      $('#cssnav li').removeClass 'active'
+    $('.docs h3').waypoint ->
+      $('#docnav li').removeClass 'active'
       $("a[href='##{$(@).text()}']").parent().addClass 'active'
 
     # smooth scrolling --------------------------------------------

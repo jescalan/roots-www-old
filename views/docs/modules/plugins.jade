@@ -1,0 +1,50 @@
+h3#plugins plugins
+  :markdown
+    Roots ships with a few core compilers that are optimized for a speedy and efficient workflow. But of course everyone has their own preferred tools, and if there are languages you would rather work in, you can build them in to roots through the plugin interface.
+
+    Plugins need only be one file, and are frequently less than 10 lines of javascript (many of the core compilers are, actually). To create a plugin, just drop a new file, javascript or coffeescript, into `/plugins`. The module need only export two methods, `settings` and `compile`. To get you started, you can run `roots plugin generate` to have roots generate a basic plugin template.
+
+    Here are a few examples of how plugins can look. Note that plugins are executed inside roots' environment, so if you want to require any external files, you need to use `module.require()` instead of just `require()` in order to have roots look for files starting in the plugins directory.
+
+    - [sass compiler](https://github.com/jenius/roots/blob/master/test/big-project/plugins/sass.coffee) (command line)
+    - [ejs compiler](https://github.com/jenius/roots/blob/master/lib/compilers/core/jade.js) (handles layout files)
+    - [stylus compiler](https://github.com/jenius/roots/blob/master/lib/compilers/core/styl.js) (js library based)
+
+    You will probably notice that a class called `Helper` is provided and does much of the work. This class manages important paths and file info and is designed to make compilers clean and easy to manage. Documentation for the `Helper` class is below.
+
+    **`helper = new Helper(file)`**    
+    Sample code for how to initialize the helper. Takes a single file from the `files` object that the `compile` method receives
+
+    **`helper.extension`**    
+    Returns the extension of the current file
+
+    **`helper.target_extension`**    
+    Returns the extension that the file will compile into
+
+    **`helper.export_path`**    
+    Returns the absolute path where file will be written after compile
+
+    **`helper.file_path`**    
+    Returns the absolute path of the current file
+
+    **`helper.file_contents`**    
+    Returns a string with the contents of the current file
+
+    **`helper.layout_path`**    
+    _If the file's target extension is html_, Returns the absolute path of the layout file it will be compiled into.
+
+    **`helper.layout_contents`**    
+    _If the file's target extension is html_, Returns the contents of the layout file it will be compiled into.
+
+    **`helper.locals(extra_object)`**    
+    Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals. You will want to add yield when compiling the layout, like in the ejs compiler example above.
+
+    **`helper.write(content)`**    
+    Writes the provided string to the correct file in the public directory.
+
+    If you want to dig into the `Helper` a bit more, feel free to [check out the source](https://github.com/jenius/roots/blob/master/lib/compilers/compile-helper.coffee). It's only one small file.
+
+    The following commands are also available to make working with plugins easier.
+
+    - `roots plugin generate` generates a plugin template for you in the `/plugins` folder.
+    - `roots plugin install github-username/repo` installs a plugin to `/plugins` from github.

@@ -1,0 +1,14 @@
+h3#precompiled-templates precompiled templates
+
+:markdown
+  Roots can precompile specific templates and make them available in your views. This can be super convenient if you are loading content onto your page using javascript, making your markup much cleaner and easier to manage. Note that this is brand new functionality, so if you are having any issues please let me know, but in my testing and personal usage, it's been quite solid. Here's how to make it happen:
+
+  - In your `app.coffee` file, you should see a commented out line setting `exports.templates` to a path. Uncomment this line, set the path to whatever you'd like, and create a folder at that path.
+
+  - Put a jade file inside that folder. This will be your template, so create it as you'd like. Currently only jade is supported for precompiled templates.
+
+  - When you compile your project, it will now create a file called `templates.js` inside your `js` folder. Load this file on to your page either directly or using require.js.
+
+  - You should now have access to a global variable called `templates` -- this is an object that holds each of your precompiled templates as javascript functions. The key will be the filename, and the value will be a function that when executed will generate html. If you have any variables in the template, pass in a single object that holds the variable names as keys and variables values as values.
+
+  - There is a tutorial video stepping through this process on the homepage if you want to check it out.

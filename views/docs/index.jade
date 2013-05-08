@@ -1,0 +1,25 @@
+#hero
+  h2
+    | roots 
+    span &#9889; 
+    | documentation
+
+#content.docs
+
+  - sections = ['tutorial', 'command line tool', 'axis css', 'languages', 'dynamic content', 'precompiled templates', 'client-side js', 'plugins', 'with a server']
+
+  #docnav
+    ul
+      - for section in sections
+        li
+          a(href='#'+section)= section
+
+  include modules/tutorial
+  include modules/cli
+  include modules/axis
+  include modules/supported-languages
+  include modules/dynamic-content
+  include modules/precompiled-templates
+  include modules/client-js
+  include modules/plugins
+  include modules/server
