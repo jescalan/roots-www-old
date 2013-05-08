@@ -16,19 +16,19 @@
         });
       }
       $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 392) {
+        if ($(window).scrollTop() > 330) {
           return $('#docnav').css({
             top: 5
           });
         } else {
           return $('#docnav').css({
-            top: 385 - $(window).scrollTop()
+            top: 330 - $(window).scrollTop()
           });
         }
       });
       $('.docs h3').waypoint(function() {
         $('#docnav li').removeClass('active');
-        return $("a[href='#" + ($(this).text()) + "']").parent().addClass('active');
+        return $("a[href='#" + ($(this).attr('id')) + "']").parent().addClass('active');
       });
       $('a[href*=#]:not([href=#])').on('click', function() {
         var factor, target;

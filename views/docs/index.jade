@@ -6,13 +6,26 @@
 
 #content.docs
 
-  - sections = ['tutorial', 'command line tool', 'axis css', 'languages', 'dynamic content', 'precompiled templates', 'client-side js', 'plugins', 'with a server']
-
   #docnav
     ul
-      - for section in sections
-        li
-          a(href='#'+section)= section
+      li
+        a(href='#tutorial') tutorial
+      li
+        a(href='#cli') command line tool
+      li
+        a(href='#axis') axis css
+      li
+        a(href='#languages') languages
+      li
+        a(href='#dynamic') dynamic content
+      li
+        a(href='#precompile') precompiled templates
+      li
+        a(href='#client-side') client-side js
+      li
+        a(href='#server') roots with a server
+      li
+        a(href='#plugins') plugin api
 
   include modules/tutorial
   include modules/cli
@@ -21,5 +34,5 @@
   include modules/dynamic-content
   include modules/precompiled-templates
   include modules/client-js
-  include modules/plugins
   include modules/server
+  include modules/plugins

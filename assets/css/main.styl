@@ -150,7 +150,7 @@ header
   max-width: 960px
   padding: 0 40px
   margin: 0 auto
-  margin-bottom: 160px
+  margin-bottom: 50px
 
   &.docs
     padding-left: 260px
@@ -179,7 +179,7 @@ header
     text-decoration: none
     transition()
     border-bottom: 1px solid transparent
-    font-weight: 700
+    font-weight: 500
 
     &:hover
       border-bottom: 1px solid orange
@@ -199,16 +199,6 @@ header
     li
       margin: 7px 0
 
-      &.active
-        bg: '/img/ribbon.png'
-        size: 200 39
-        margin-left: -28px
-        padding-left: 28px
-        margin-bottom: -12px
-        padding-top: 3px
-        bold()
-        text-shadow: 0 1px 1px rgba(#000,.2)
-
       a
         reset-link()
         color: #fff
@@ -216,6 +206,18 @@ header
 
         &:hover
           color: #e2d3cf
+
+      &.active
+        bg: '/img/ribbon.png'
+        size: 200 39
+        margin-left: -28px
+        padding-left: 28px
+        margin-bottom: -12px
+        padding-top: 3px
+        text-shadow: 0 1px 1px rgba(#000,.2)
+
+        a
+          bold()
 
 .easing-demo
 
@@ -433,6 +435,12 @@ input
   p
     fs: 12px
     bold()
+
+footer
+  width: 100%
+  height: 250px
+  background: lighten(#e7ebf2, 30%) url('/img/circle-logo.svg') center center no-repeat
+  background-size: 100px 100px
 
 // animations!
 

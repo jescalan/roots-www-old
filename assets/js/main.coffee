@@ -13,16 +13,16 @@ require js, ->
       $('#docnav').css top: 5
 
     $(window).on 'scroll', ->
-      if $(window).scrollTop() > 392
+      if $(window).scrollTop() > 330
         $('#docnav').css top: 5
       else
-        $('#docnav').css top: 385 - $(window).scrollTop()
+        $('#docnav').css top: 330 - $(window).scrollTop()
 
     # waypoints ---------------------------------------------------
 
     $('.docs h3').waypoint ->
       $('#docnav li').removeClass 'active'
-      $("a[href='##{$(@).text()}']").parent().addClass 'active'
+      $("a[href='##{$(@).attr('id')}']").parent().addClass 'active'
 
     # smooth scrolling --------------------------------------------
 
