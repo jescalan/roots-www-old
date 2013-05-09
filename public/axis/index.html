@@ -71,7 +71,7 @@ font-face(&#39;proxima-nova&#39;, &#39;/fonts&#39;)
 
   // no arguments, call with empty parens
   transition()</code></pre>
-<p>Finally, the source code for roots is organized exactly as this page is, and is thoroughly commented and as clear as possible. Feel free to <a href="https://github.com/jenius/roots-css/tree/master/roots-css">check out the source</a> if you are after implementation details.</p>
+<p>Finally, the source code for roots is organized exactly as this page is, and is thoroughly commented and as clear as possible. Feel free to <a href="https://github.com/jenius/axis">check out the source</a> if you are after implementation details.</p>
 
   <h3 id="settings">settings</h3><p>There are a number of global settings in roots that you can and should feel free to override at any time. If you are using the <a href="https://github.com/jenius/roots">roots command line client</a>, any project you generate will come with a copy of the roots settings file in the css and/or assets folder. I would list them all out here, but it&#39;s probably easier to just look at them directly.</p>
 <p><a href="https://github.com/jenius/roots/blob/master/templates/new/assets/css/_settings.styl">Check out the settings variables &raquo;</a></p>
@@ -392,7 +392,7 @@ if ((new Date).toString().substr(0,3) == "Sat") {
 
   <div class="btn">no me, i'm shinier</div>
   <div class="btn purple">me, i'm fabulous!</div>
-  <div class="btn white">i'm so pure</div><p><strong><code>button-disabled()</code></strong><br>Lay this mixin down on any roots-css button and it will appear to be disabled. Again, make sure you actually disable it in your html.</p>
+  <div class="btn white">i'm so pure</div><p><strong><code>button-disabled()</code></strong><br>Lay this mixin down on any axis button and it will appear to be disabled. Again, make sure you actually disable it in your html.</p>
 
   <div class="btn disabled">don't click me :(</div><p><strong><code>buttons()</code></strong><br>This is <em>a root level mixin</em> that applies the <code>simple-button</code> mixin to the class <code>btn-simple</code> and the <code>button</code> mixin to the class <code>btn</code>. If you add a <code>disabled</code> class to either one, it will render appropriately as well.</p>
 
@@ -425,7 +425,7 @@ if ((new Date).toString().substr(0,3) == "Sat") {
   </figure><p><strong><code>nav(size = 1, color = #222, link-color = #fff, fixed = true)</code></strong><br>Creates a standard navigation bar. The size parameter just scales everything up or down, the rest is self-explanitory. Make sure to put this mixin on a <code>nav</code> element with a  <code>ul</code> and/or <code>h1</code> inside for the navigation and title respetively. Example coming soon.</p>
 <p><strong><code>flash-notices()</code></strong><br>This is a <em>root level mixin</em> which adds the appropriate flash notification mixin to elements with the classes <code>.flash .error</code>, <code>.flash .success</code>, <code>.flash .notice</code>, or <code>.flash .warning</code>. Must have both of the classes. It will make sense once you start styling them.</p>
 
-  <h3 id="animation">animation</h3><p>There are a bunch of animations available in roots-css that have been ported from <a href="http://daneden.me/animate/">animate.css</a>. If you @import <code>roots-css/animation</code>, they will be made available and you can use any of them in your project. Note that any animation with &quot;big&quot; at the end has been left out because these are horrendous and should never be used. And if you really want to use it, you can write it yourself. An example of usage would be as such:</p>
+  <h3 id="animation">animation</h3><p>There are a bunch of animations available in axis that have been ported from <a href="http://daneden.me/animate/">animate.css</a>. If you @import <code>roots-css/animation</code>, they will be made available and you can use any of them in your project. Note that any animation with &quot;big&quot; at the end has been left out because these are horrendous and should never be used. And if you really want to use it, you can write it yourself. An example of usage would be as such:</p>
 <pre><code>  @import &#39;roots-css/animation&#39;
   .test
     animation: bounce 3s infinite</code></pre>
