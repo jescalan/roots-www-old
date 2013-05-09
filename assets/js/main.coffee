@@ -11,7 +11,7 @@ requirejs.config
 # this will fire once the required scripts have been loaded
 require ['jquery', 'waypoints'], ($) ->
   $ ->
-    setTimeout (-> $('.icon').css opacity: 1), 500
+    $('.icon').addClass 'in'
 
     # stick the navigation when it needs to be stuck --------------
 

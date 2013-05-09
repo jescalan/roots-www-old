@@ -13,11 +13,7 @@
 
   require(['jquery', 'waypoints'], function($) {
     return $(function() {
-      setTimeout((function() {
-        return $('.icon').css({
-          opacity: 1
-        });
-      }), 500);
+      $('.icon').addClass('in');
       if ($(window).scrollTop() > 392) {
         $('#docnav').css({
           top: 5

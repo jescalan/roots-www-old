@@ -114,18 +114,24 @@ header
     li
       width: 33%
       text-align: center
+
       &:nth-child(2) .icon
-        -webkit-animation-delay: .3s
+        transition-delay: .3s
 
       &:nth-child(3) .icon
-        -webkit-animation-delay: .5s
+        transition-delay: .5s
 
       .icon
-        -webkit-animation: icon-in 1s ease
         font-family: 'entypo'
         font-size: 180px
         text-align: center
         opacity: 0
+        transform: translateY(20px)
+        transition: all 1s ease
+
+        &.in
+          opacity: 1
+          transform: translateY(0px)
 
       span
         opacity: .6
@@ -427,14 +433,6 @@ footer
   background-size: 100px 100px
 
 // animations!
-
-@keyframes icon-in
-  0%
-    opacity: 0
-    -webkit-transform: translateY(20px)
-  100%
-    opacity: 1
-    -webkit-transform: translateY(0px)
 
 @keyframes fadeIn
   0%
