@@ -478,57 +478,6 @@ header:after {
   clear: both;
 }
 header .title {
-  line-height: 0;
-  float: left;
-  margin-top: -33px;
-  color: inherit;
-  border: none;
-  text-decoration: none;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  transition: all .3s ease;
-  display: block;
-}
-header .title:hover {
-  color: inherit;
-  border: none;
-  text-decoration: none;
-}
-header .title:visited {
-  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-header .title:hover {
-  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-}
-header .title .main {
-  font-size: 80px;
-  font-weight: 100;
-  color: #222;
-}
-header .title small {
-  font-size: 17px;
-  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  letter-spacing: 1px;
-  padding-left: 12px;
-}
-header .title {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -548,6 +497,15 @@ header .title {
   transition: all .3s ease;
   margin-bottom: -28px;
   margin-top: -20px;
+  float: left;
+}
+header .title:hover {
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
 }
 header .title:hover {
   -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -559,6 +517,7 @@ header .title:hover {
 }
 header nav {
   text-align: right;
+  float: right;
 }
 header nav ul {
   zoom: 1;
@@ -1379,12 +1338,12 @@ input.success:focus {
   -o-border-radius: 3.000002307694083px;
   -ms-border-radius: 3.000002307694083px;
   border-radius: 3.000002307694083px;
-  background: url("noise.png") repeat, #813cb4 -webkit-gradient(linear, left top, left bottom, color-stop(0, #995ac8), color-stop(1, #813cb4)) repeat-x;
-  background: url("noise.png") repeat, #813cb4 -webkit-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("noise.png") repeat, #813cb4 -moz-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("noise.png") repeat, #813cb4 -o-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("noise.png") repeat, #813cb4 -ms-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
-  background: url("noise.png") repeat, #813cb4 linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #813cb4 -webkit-gradient(linear, left top, left bottom, color-stop(0, #995ac8), color-stop(1, #813cb4)) repeat-x;
+  background: url("/img/noise.png") repeat, #813cb4 -webkit-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #813cb4 -moz-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #813cb4 -o-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #813cb4 -ms-linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #813cb4 linear-gradient(top, #995ac8 0%, #813cb4 100%) repeat-x;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
   border: 1px solid #813cb4;
   color: #fff;
@@ -1426,12 +1385,12 @@ input.success:focus {
   -o-border-radius: 3.000002307694083px;
   -ms-border-radius: 3.000002307694083px;
   border-radius: 3.000002307694083px;
-  background: url("noise.png") repeat, #e6e6e6 -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e6e6e6)) repeat-x;
-  background: url("noise.png") repeat, #e6e6e6 -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("noise.png") repeat, #e6e6e6 -moz-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("noise.png") repeat, #e6e6e6 -o-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("noise.png") repeat, #e6e6e6 -ms-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
-  background: url("noise.png") repeat, #e6e6e6 linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #e6e6e6 -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e6e6e6)) repeat-x;
+  background: url("/img/noise.png") repeat, #e6e6e6 -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #e6e6e6 -moz-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #e6e6e6 -o-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #e6e6e6 -ms-linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
+  background: url("/img/noise.png") repeat, #e6e6e6 linear-gradient(top, #fff 0%, #e6e6e6 100%) repeat-x;
   text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
   border: 1px solid #e6e6e6;
   color: #494949;
@@ -1565,17 +1524,23 @@ footer {
   -ms-background-size: 100px 100px;
   background-size: 100px 100px;
 }
-@media screen and (max-width: 1031px) {
+@media screen and (max-width: 870px) {
   header .title {
     float: none;
-    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
   header nav {
-    text-align: center;
+    margin: 0 auto;
+    width: 510px;
+    float: none;
   }
 }
 @media screen and (max-width: 615px) {
   #hero ul li {
+    width: 100%;
+  }
+  header nav {
     width: 100%;
   }
 }

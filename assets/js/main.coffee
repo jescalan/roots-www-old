@@ -1,9 +1,15 @@
 # Add scripts to load to this array. These can be loaded remotely like jquery
 # is below, or can use file paths, like 'vendor/underscore'
-js = ["http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", '/js/waypoints.min.js']
+requirejs.config
+  shim: 
+    waypoints:
+      deps: ['jquery']
+  paths:
+    jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min'
+    waypoints: '/js/waypoints.min'
 
 # this will fire once the required scripts have been loaded
-require js, ->
+require ['jquery', 'waypoints'], ($) ->
   $ ->
     setTimeout (-> $('.icon').css opacity: 1), 500
 

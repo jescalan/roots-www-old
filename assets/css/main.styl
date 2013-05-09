@@ -5,6 +5,7 @@ flash-notices()
 
 blue = #3e444d
 orange = #e77552
+img-path = '/img/'
 
 @font-face
   font-family: 'entypo'
@@ -54,38 +55,21 @@ header
   margin: 0 auto
 
   .title
-    line-height: 0
-    float: left
-    margin-top: -33px
-    reset-link()
-    transition()
-    hover-fade: .7
-    display: block
-
-    .main
-      font-size: 80px
-      font-weight: 100
-      color: #222
-
-    small
-      fs: 17px
-      opacity: .6
-      letter-spacing: 1px
-      padding-left: 12px
-
-  .title
-    ir: '/img/logo.svg' 218px 73px
+    ir: 'logo.svg' 218px 73px
     background-size: 218px 73px
     display: block
+    hover-fade: .7
     transition()
     margin-bottom: -28px
     margin-top: -20px
+    float: left
 
     &:hover
       opacity: .8
 
   nav
     text-align: right
+    float: right
 
     ul
       inline-list()
@@ -208,7 +192,7 @@ header
           color: #e2d3cf
 
       &.active
-        bg: '/img/ribbon.png'
+        bg: 'ribbon.png'
         size: 200 39
         margin-left: -28px
         padding-left: 28px
@@ -349,7 +333,7 @@ input
     gradient: #D988D0 #7429D9
 
   &.noise
-    noise-gradient: #80D9B0 #88C5D9 '/img/noise.png'
+    noise-gradient: #80D9B0 #88C5D9 'noise.png'
 
 .interaction
   padding: 10px 0
@@ -422,13 +406,13 @@ input
     size: 140
 
     &.gs
-      bg: '/img/t1.png'
+      bg: 't1.png'
 
     &.rcss
-      bg: '/img/t2.png'
+      bg: 't2.png'
 
   .play
-    bg: '/img/play.png'
+    bg: 'play.png'
     size: 46 50
     absolute: top 47px left 48px
 

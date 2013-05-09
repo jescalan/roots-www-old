@@ -1,9 +1,17 @@
 (function() {
-  var js;
+  requirejs.config({
+    shim: {
+      waypoints: {
+        deps: ['jquery']
+      }
+    },
+    paths: {
+      jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min',
+      waypoints: '/js/waypoints.min'
+    }
+  });
 
-  js = ["http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", '/js/waypoints.min.js'];
-
-  require(js, function() {
+  require(['jquery', 'waypoints'], function($) {
     return $(function() {
       setTimeout((function() {
         return $('.icon').css({
