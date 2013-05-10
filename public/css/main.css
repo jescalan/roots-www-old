@@ -1493,7 +1493,7 @@ input.success:focus {
 }
 .video li {
   float: left;
-  margin-right: 40px;
+  margin-right: 30px;
   list-style-type: none;
 }
 .video li:last-child {
@@ -1507,6 +1507,7 @@ input.success:focus {
   -o-transition: all .3s ease;
   -ms-transition: all .3s ease;
   transition: all .3s ease;
+  width: 166px;
 }
 .video li:hover {
   -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -1543,6 +1544,7 @@ input.success:focus {
 .video p {
   font-size: 12px;
   font-weight: bold;
+  text-align: left;
 }
 footer {
   width: 100%;
