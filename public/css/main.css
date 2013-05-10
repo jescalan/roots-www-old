@@ -1526,17 +1526,36 @@ input.success:focus {
   border-radius: 4px;
   width: 140px;
   height: 140px;
+  -webkit-background-size: 140px 140px;
+  -moz-background-size: 140px 140px;
+  -o-background-size: 140px 140px;
+  -ms-background-size: 140px 140px;
+  background-size: 140px 140px;
 }
 .video .vid.gs {
   background: url("/img/t1.png") no-repeat;
 }
-.video .vid.rcss {
+.video .vid.structure {
   background: url("/img/t2.png") no-repeat;
+}
+.video .vid.axiscss {
+  background: url("/img/t3.jpg") no-repeat;
+}
+.video .vid.dynamic {
+  background: url("/img/t4.jpg") no-repeat;
+}
+.video .vid.precompiled {
+  background: url("/img/t5.jpg") no-repeat;
 }
 .video .play {
   background: url("/img/play.png") no-repeat;
   width: 46px;
   height: 50px;
+  -webkit-background-size: 46px 50px;
+  -moz-background-size: 46px 50px;
+  -o-background-size: 46px 50px;
+  -ms-background-size: 46px 50px;
+  background-size: 46px 50px;
   position: absolute;
   top: 47px;
   left: 48px;
