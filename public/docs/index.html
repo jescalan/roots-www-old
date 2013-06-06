@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="description" content="roots is a light, fast build system for advanced front end development">
-    <meta name="author" content="jeff escalante">
-    <title>roots | where it all begins</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="//use.typekit.net/ltb5pgo.js"></script><script type="text/javascript">
+<!DOCTYPE html><html><head><meta charset="utf8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="description" content="roots is a light, fast build system for advanced front end development"><meta name="author" content="jeff escalante"><title>roots | where it all begins</title><link rel="stylesheet" href="/css/main.css"><script src="//use.typekit.net/ltb5pgo.js"></script><script type="text/javascript">
 (function() {
   var e;
 
@@ -18,61 +9,24 @@
   }
 
 }).call(this);
-</script>
-  </head>
-  <body><a href="http://github.com/jenius/roots" class="fork-ribbon">fork on github</a>
-    <header><a href="/" class="title"></a>
-      <nav>
-        <ul>
-          <li><a href="/#overview">overview</a></li>
-          <li><a href="/#installation">installation</a></li>
-          <li><a href="/#tutorials">tutorials</a></li>
-          <li><a href="/docs">documentation</a></li>
-          <li><a href="/axis">axis css</a></li>
-          <li><a href="/#help">help</a></li>
-        </ul>
-      </nav>
-    </header>
-<div id="hero">
-  <h2>roots <span>&#9889; </span>documentation</h2>
-</div>
-<div id="content" class="docs">
-  <div id="docnav">
-    <ul>
-      <li><a href="#tutorial">tutorial</a></li>
-      <li><a href="#cli">command line tool</a></li>
-      <li><a href="#axis">axis css</a></li>
-      <li><a href="#languages">languages</a></li>
-      <li><a href="#dynamic">dynamic content</a></li>
-      <li><a href="#precompile">precompiled templates</a></li>
-      <li><a href="#client-side">client-side js</a></li>
-      <li><a href="#server">roots with a server</a></li>
-      <li><a href="#plugins">plugin api</a></li>
-    </ul>
-  </div>
-  <h3 id="tutorial">tutorial: zero to ship in 5 minutes</h3><p>Roots is built for speed. And I&#39;m not just saying that because it sounds good, speed is actually the only purpose behind roots, and has been so from the beginning. Shipping a simple site in 5 minutes is actually not unheard of - I have done it a few times using roots. So no, this isn&#39;t a ridiculous tour-de-force example, this is real life.</p>
+</script></head><body><a href="http://github.com/jenius/roots" class="fork-ribbon">fork on github</a><header><a href="/" class="title"></a><nav><ul><li><a href="/#overview">overview</a></li><li><a href="/#installation">installation</a></li><li><a href="/#tutorials">tutorials</a></li><li><a href="/docs">documentation</a></li><li><a href="/axis">axis css</a></li><li><a href="/#help">help</a></li></ul></nav></header><div id="hero"><h2>roots <span>&#9889; </span>documentation</h2></div><div id="content" class="docs"><div id="docnav"><ul><li><a href="#tutorial">tutorial</a></li><li><a href="#cli">command line tool</a></li><li><a href="#axis">axis css</a></li><li><a href="#languages">languages</a></li><li><a href="#dynamic">dynamic content</a></li><li><a href="#precompile">precompiled templates</a></li><li><a href="#client-side">client-side js</a></li><li><a href="#server">roots with a server</a></li><li><a href="#plugins">plugin api</a></li></ul></div><h3 id="tutorial">tutorial: zero to ship in 5 minutes</h3><p>Roots is built for speed. And I&#39;m not just saying that because it sounds good, speed is actually the only purpose behind roots, and has been so from the beginning. Shipping a simple site in 5 minutes is actually not unheard of - I have done it a few times using roots. So no, this isn&#39;t a ridiculous tour-de-force example, this is real life.</p>
 <p>Let&#39;s jump right into it. Start your timers, open up your command line, and get roots installing using <code>npm install roots -g</code>, if you don&#39;t have it installed already (shame on you!). To ensure that there are no errors, prefix it with <code>sudo</code>. Once finished, <code>cd</code> into wherever you want to create your site and run <code>roots new example</code>, with &#39;example&#39; being the name of your site. Now run <code>cd example</code>, then open up the folder in your <a href="http://www.sublimetext.com/">favorite text editor</a>.</p>
 <p>Let&#39;s see how the site looks. From your command line, run <code>roots watch</code>, and within a second or so, the site should open in your browser. For the 5 minute ship edition, we don&#39;t need to learn about all the jade fanciness, so open up <code>views/index.jade</code>, delete the contents of the file, and put in <code>p hello world</code>. Save it.</p>
 <p>As soon as you&#39;ve saved the file, you should see that your browser already refreshed to show your new content. How convenient. Ok, this site is finished, looks good. Stop the watcher with <code>control + c</code>, and let&#39;s deploy this bad boy. Make sure that you have the <a href="https://toolbelt.heroku.com/">heroku toolbelt</a> installed, and just run <code>roots deploy</code>. In about 20 seconds, your site should be online. Run <code>heroku open</code> to see it live.</p>
 <p>That was refreshing, huh?</p>
-
-  <h3 id="cli">command line tool<p>Once you have roots installed, it exposes a few useful commands for getting your project set up. You must be at least somewhat familiar with the command line to be able to use roots.</p>
-<p><code>$ roots new name</code>   - creates a new project in the current directory called name<br><code>$ roots compile</code>    - compiles, minifies, and compresses the project to the public folder<br><code>$ roots watch</code>      - compiles the project, opens it on a local server, watches files for change, and live reloads<br><code>$ roots update</code>     - installs a new version of roots if there is one<br><code>$ roots js</code>         - wrapper for <a href="http://twitter.github.com/bower/">bower</a></p>
+<h3 id="cli">command line tool<p>Once you have roots installed, it exposes a few useful commands for getting your project set up. You must be at least somewhat familiar with the command line to be able to use roots.</p>
+<p><code>$ roots new name</code>   - creates a new project in the current directory called name<br><code>$ roots compile</code>    - compiles, minifies, and compresses the project to the public folder<br><code>$ roots watch</code>      - compiles the project, opens it on a local server, watches files for change, and live reloads<br><code>$ roots update</code>     - installs a new version of roots if there is one<br><code>$ roots js</code>         - wrapper for <a href="http://bower.io">bower</a></p>
 <p>...and if you forget or need help, just type <code>roots help</code> for a list of available commands</p>
-
-  </h3>
-  <h3 id="axis">axis css library</h3><p>Axis is a custom-built css library for stylus that ships with roots. It might take a bit to get down all the shortcuts that axis offers, but once you do, I promise it will speed up your css coding signficiantly.</p>
+</h3><h3 id="axis">axis css library</h3><p>Axis is a custom-built css library for stylus that ships with roots. It might take a bit to get down all the shortcuts that axis offers, but once you do, I promise it will speed up your css coding signficiantly.</p>
 <p><a href="/axis">view axis css docs &raquo;</a></p>
-
-  <h3 id="languages">supported languages</h3><p>The default stack in roots is <a href="http://jade-lang.com/">jade</a>, <a href="http://learnboost.github.io/stylus/">stylus</a>, and <a href="http://coffeescript.org/">coffeescript</a>. I chose these languages for a few reasons, and I promise all of them were good. If you are unfamiliar with any of these languages, I would strongly urge you to give them a try. They are all well supported, mature, and robust languages that are used widely, and are very terse, clean, and powerful.</p>
+<h3 id="languages">supported languages</h3><p>The default stack in roots is <a href="http://jade-lang.com/">jade</a>, <a href="http://learnboost.github.io/stylus/">stylus</a>, and <a href="http://coffeescript.org/">coffeescript</a>. I chose these languages for a few reasons, and I promise all of them were good. If you are unfamiliar with any of these languages, I would strongly urge you to give them a try. They are all well supported, mature, and robust languages that are used widely, and are very terse, clean, and powerful.</p>
 <p>I do however understand that many people do not trust my language choices and have their own preferences. This is totally fine, and there are lots of options out there for you to make roots your own. First, you can write in vanilla html, css, and/or javascript without a problem. Just change the extension on the files to the appropriate one you are after, and everything will still compile out great. You will however lose a lot of the extra power, such as layouts, the css library etc. If you want to generate a project that has vanilla html/css/js from the beginning, you can add the <code>--basic</code> flag to your roots new command, like this: <code>roots new example --basic</code>.</p>
 <p>I&#39;ve found that a number of people prefer to write html in a syntax more similar to vanilla html, but without losing the additional templating power that comes with jade. If this is the case for you, a language called <a href="https://github.com/visionmedia/ejs">ejs</a> is built in to roots by default, and you can see how a project using ejs looks by adding the <code>--ejs</code> flag to your roots new command, like this: <code>roots new example --ejs</code>.</p>
 <p>If writing css with semicolons and brackets is your jam, no worries. You can write css exactly like vanilla css in stylus. Brackets and semicolons are optional, so you can put them in if you want, or skip them. This is one of the things that makes stylus a truly excellent preprocessor.</p>
 <p>If you don&#39;t like coffeescript, it&#39;s quite easy to simple change the file extension to <code>.js</code>. You will lose none of the additional power that comes with coffeescript, which is just great.</p>
 <p>I&#39;ve also noticed that some people prefer working with haml/sass over jade/stylus. To be honest, they are hardly any different at all. Jade and stylus are slightly more terse if anything, and offer a small bit more power. In addition, the built in <a href="/axis">axis css library</a> provides a very near match to compass, and covers your ass in terms of vendor prefixes, older browser compatibility, and time-saving abbreviations. If you are so stuck on haml/sass/compass that you simply cannot branch out and try something new though, roots might not be your thing. These three aforementioned libraries are built in ruby, which does not jive too well with node, which roots is built on. If you are looking for a similar system that&#39;s built in ruby instead and defaults to haml/sass/compass, I would recommend checking out <a href="http://middlemanapp.com/">middleman</a>.</p>
 <p>Finally, if you have any other languages that you are into, it&#39;s easy to extend roots to support any language, although js-based precompilers are the quickest to integrate. Check out the <a href="#plugins">documentation for plugins</a> for more info.</p>
-
-  <h3 id="dynamic">dynamic content</h3><p>A recent addition to roots will allow you to create dynamic content, much like jekyll, but a little cleaner and more flexible. The addition of dynamic content to roots makes it suitable for any website that doesn&#39;t need user accounts and logins. I think this is awesome because it widens the breadth of projects which you can create as a static site. And static sites are awesome because they are simple and fast as hell. Here&#39;s a short walkthrough of how to use dynamic content - I&#39;ll use a blog as an example:</p>
+<h3 id="dynamic">dynamic content</h3><p>A recent addition to roots will allow you to create dynamic content, much like jekyll, but a little cleaner and more flexible. The addition of dynamic content to roots makes it suitable for any website that doesn&#39;t need user accounts and logins. I think this is awesome because it widens the breadth of projects which you can create as a static site. And static sites are awesome because they are simple and fast as hell. Here&#39;s a short walkthrough of how to use dynamic content - I&#39;ll use a blog as an example:</p>
 <ul>
 <li><p>Create a folder at the root of the project called the name of your collection. Since I&#39;m making a blog here, I&#39;m going to call it &quot;posts&quot;.</p>
 </li>
@@ -97,8 +51,7 @@
 <li><p>If you run <code>roots new whatever --blog</code>, I have a template set up that already has all the boilerplate set up, if you want to test it real quick.</p>
 </li>
 </ul>
-
-  <h3 id="precompile">precompiled templates</h3><p>Roots can precompile specific templates and make them available in your views. This can be super convenient if you are loading content onto your page using javascript, making your markup much cleaner and easier to manage. Note that this is brand new functionality, so if you are having any issues please let me know, but in my testing and personal usage, it&#39;s been quite solid. Here&#39;s how to make it happen:</p>
+<h3 id="precompile">precompiled templates</h3><p>Roots can precompile specific templates and make them available in your views. This can be super convenient if you are loading content onto your page using javascript, making your markup much cleaner and easier to manage. Note that this is brand new functionality, so if you are having any issues please let me know, but in my testing and personal usage, it&#39;s been quite solid. Here&#39;s how to make it happen:</p>
 <ul>
 <li><p>In your <code>app.coffee</code> file, you should see a commented out line setting <code>exports.templates</code> to a path. Uncomment this line, set the path to whatever you&#39;d like, and create a folder at that path.</p>
 </li>
@@ -111,18 +64,14 @@
 <li><p>There is a tutorial video stepping through this process on the homepage if you want to check it out.</p>
 </li>
 </ul>
-
-  <h3 id="client-side">client-side js<p>Using javascript libraries on the client-side is super helpful, but downloading them for every project and keeping them up to date is a huge pain. Luckily, the wonderful developers at twitter created <a href="http://twitter.github.com/bower/">bower</a> for this exact purpose. You can run <code>roots install</code> followed by any package name to have bower install it directly into the <code>js/components</code> folder of your roots project. Also available:</p>
+<h3 id="client-side">client-side js<p>Using javascript libraries on the client-side is super helpful, but downloading them for every project and keeping them up to date is a huge pain. Luckily, the wonderful developers at twitter created <a href="http://bower.io">bower</a> for this exact purpose. You can run <code>roots install</code> followed by any package name to have bower install it directly into the <code>js/components</code> folder of your roots project. Also available:</p>
 <p><code>roots js list</code> - list of installed packages<br><code>roots js search name</code> - search for a package by <code>name</code><br><code>roots js update name</code> - update <code>name</code> to the latest version<br><code>roots js uninstall name</code> - remove <code>name</code><br><code>roots js info name</code> - get more info about <code>name</code>    </p>
 <p>There are a lot of great open-source packages registered with bower. Check them out <a href="http://sindresorhus.com/bower-components/">here</a>. In addition, <a href="http://requirejs.org">require.js</a> is included by default in new project templates to help load your client-side javascript dependencies smoothly.</p>
-
-  </h3>
-  <h3 id="server">roots with a server</h3><p>It is possible to use roots with a server, although obviously you don&#39;t get any of the static compilation etc. The main pieces of roots that can be helpful with a server-side app are the languages, live reloading, and the css library.</p>
+</h3><h3 id="server">roots with a server</h3><p>It is possible to use roots with a server, although obviously you don&#39;t get any of the static compilation etc. The main pieces of roots that can be helpful with a server-side app are the languages, live reloading, and the css library.</p>
 <p>I have a plugin written for <a href="http://expressjs.com/">express</a> that sets up express with the default stack of jade, coffee, and stylus, includes the css library, and sets up live reloads, so this works pretty well. To create a roots app backed by express, just run <code>roots new example --express</code>, with example being the name of your app. Once you are using an express app, command line options like <code>roots watch</code> no longer apply - you can run the app the way express specifies (with <code>node app.js</code>).</p>
 <p>I also have a rails gem written that includes stylus and the css library, and gets the language stack as close as possible. You can check out this gem in the <a href="http://github.com/jenius/roots-rails">roots-rails repo</a> if you are interested.</p>
 <p>I&#39;m happy to think about extending roots to any other platforms that people are interested in as well, just hit me up <a href="http://twitter.com/jescalan">on twitter</a> and let me know what you&#39;re thinking.</p>
-
-  <h3 id="plugins">plugins<p>Roots ships with a few core compilers that are optimized for a speedy and efficient workflow. But of course everyone has their own preferred tools, and if there are languages you would rather work in, you can build them in to roots through the plugin interface.</p>
+<h3 id="plugins">plugins<p>Roots ships with a few core compilers that are optimized for a speedy and efficient workflow. But of course everyone has their own preferred tools, and if there are languages you would rather work in, you can build them in to roots through the plugin interface.</p>
 <p>Plugins need only be one file, and are frequently less than 10 lines of javascript (many of the core compilers are, actually). To create a plugin, just drop a new file, javascript or coffeescript, into <code>/plugins</code>. The module need only export two methods, <code>settings</code> and <code>compile</code>. To get you started, you can run <code>roots plugin generate</code> to have roots generate a basic plugin template.</p>
 <p>Here are a few examples of how plugins can look. Note that plugins are executed inside roots&#39; environment, so if you want to require any external files, you need to use <code>module.require()</code> instead of just <code>require()</code> in order to have roots look for files starting in the plugins directory.</p>
 <ul>
@@ -147,15 +96,5 @@
 <li><code>roots plugin generate</code> generates a plugin template for you in the <code>/plugins</code> folder.</li>
 <li><code>roots plugin install github-username/repo</code> installs a plugin to <code>/plugins</code> from github.</li>
 </ul>
-
-  </h3>
-</div>
-    <footer></footer>
-  </body>
-  <script data-main="/js/main" src="/js/require.js"></script><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
-socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reload() }</script>
-  <script>
-    var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-37002571-1']);_gaq.push(['_setDomainName', 'roots.cx']);_gaq.push(['_trackPageview']);
-    (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
-  </script>
-</html>
+</h3></div><footer></footer></body><script data-main="/js/main" src="/js/require.js"></script><script>var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-37002571-1']);_gaq.push(['_setDomainName', 'roots.cx']);_gaq.push(['_trackPageview']);
+(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script></html>
