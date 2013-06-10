@@ -1,0 +1,110 @@
+h3#vertical-rhythm vertical rhythm
+  :markdown
+    The vertical-rhythm module is ported directly from [Compass](http://compass-style.org/reference/compass/typography/vertical_rhythm/) and functions in very much the same way, with few subtle differences to fix a margin collapse bug with **normalize.css**. If your project makes use of Normalize and you want vertical rhythm, call `establish-baseline('normalize')` instead of the `normalize()` mixin.
+
+    #### Configurable Variables
+
+    **`base-font-size = 16px`**    
+    The base font size.
+
+    **`base-line-height = 24px`**    
+    The base line height determines the basic unit of vertical ryhthm.
+
+    **`default-rhythm-border-style = solid`**    
+    Set the default border style for rhythm borders.
+
+    **`relative-font-sizing = true`**    
+    Set to false if you want to use absolute pixels in sizing your typography.
+
+    **`round-to-nearest-half-line = false`**    
+    Allows the `adjust-font-size-to` mixin and the `-lines-for-font-size` function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines.
+
+    **`min-line-padding = 2px`**    
+    Ensure there is at least this many pixels above and below the text.
+
+    **`font-unit = relative-font-sizing ? 1em : base-font-size`**    
+    `base-font-size`, but in your output unit of choice. Defaults to `1em` when `relative-font-sizing` is `true`.
+
+    #### Constants
+
+    **`browser-default-font-size = 16px`**    
+    The default font size in all browsers.
+
+    **`base-rhythm-unit = base-line-height / base-font-size * font-unit`**    
+    The basic unit of font rhythm.
+
+    **`base-leader = (base-line-height - base-font-size) * font-unit / base-font-size`**    
+    The leader is the amount of whitespace in a line. It might be useful in your calculations.
+
+    **`base-half-leader = base-leader / 2`**    
+    The half leader is the amount of whitespace above and below a line. It might be useful in your calculations.
+
+    #### Functions
+
+    **`-unitless(number)`**    
+    `true` if a number has no unit.
+
+    **`-relative-unit(number)`**    
+    `true` if a number has a relative unit.
+
+    **`-absolute-unit(number)`**    
+    `true` if a number has an absolute unit.
+
+    **`-rhythm(lines = 1, font-size = base-font-size, offset = 0)`**    
+    Calculates rhythm units.
+
+    **`-lines-for-font-size(font-size)`**    
+    Calculates the minimum multiple of rhythm units needed to contain the font size.
+
+    #### Mixins
+
+    **`establish-baseline(font-size = base-font-size)`**    
+    Establishes a font baseline for the given font size. Alternatively, if the string `'normalize'` is passed; will output a modified **normalize.css** that conforms to a baseline grid.
+
+    **`debug-vertical-alignment()`**    
+    Show a background image that can be used to debug your alignments. Uses a temporary strategy via [Basehold.it](http://basehold.it) that requires an internet connection.
+
+    **`adjust-font-size-to(to-size, lines = -lines-for-font-size(to-size), from-size = base-font-size)`**    
+    Adjust a block to have a different font size and line height to maintain the rhythm. `lines` specifies how many multiples of the baseline rhythm each line of this font should use up. It does not have to be an integer, but it defaults to the smallest integer that is large enough to fit the font. Use `from-size` to adjust from a `font-size` other than the `base-font-size`.
+
+    **`adjust-leading-to(lines, font-size = base-font-size)`**    
+    Adjust a block to have different line height to maintain the rhythm. `lines` specifies how many multiples of the baseline rhythm each line of this font should use up. It does not have to be an integer, but it defaults to the smallest integer that is large enough to fit the font.
+
+    **`leader(lines = 1, font-size = base-font-size, property = margin)`**    
+    Apply leading whitespace. The `property` can be either `margin` or `padding`.
+
+    **`padding-leader(lines = 1, font-size = base-font-size)`**    
+    Apply leading whitespace as `padding`.
+
+    **`margin-leader(lines = 1, font-size = base-font-size)`**    
+    Apply leading whitespace as `margin`.
+
+     **`trailer(lines = 1, font-size = base-font-size, property = margin)`**    
+    Apply trailing whitespace. The `property` can be either `margin` or `padding`.
+
+    **`padding-trailer(lines = 1, font-size = base-font-size)`**    
+    Apply trailing whitespace as `padding`.
+
+    **`margin-trailer(lines = 1, font-size = base-font-size)`**    
+    Apply trailing whitespace as `margin`.
+
+    **`rhythm(l = 0, pl = 0, pt = 0, t = 0, font-size = base-font-size)`**    
+    Shorthand mixin to apply whitespace for top and bottom margins and padding.    
+    `l` = `leader`, `pl` = `padding-leader`, `pt` = `padding-trailer`, `t` = `trailer`.
+
+    **`apply-side-rhythm-border(side, w = 1px, lines = 1, font-size = base-font-size, bs = default-rhythm-border-style)`**    
+    Apply a border and whitespace to any side without destroying the vertical rhythm. The whitespace must be greater than the width of the border.    
+    `w` = `width`, `bs` = `border-style`
+
+    **`rhythm-borders(w = 1px, lines = 1, font-size = base-font-size, bs = default-rhythm-border-style)`**    
+    Apply borders and whitespace equally to all sides.    
+    `w` = `width`, `bs` = `border-style`
+
+    **`leading-border(width = 1px, lines = 1, font-size = base-font-size, border-style = default-rhythm-border-style)`**    
+    Apply a leading border.
+
+    **`trailing-border(width = 1px, lines = 1, font-size = base-font-size, border-style = default-rhythm-border-style)`**    
+    Apply a trailing border.
+
+    **`horizontal-borders(width = 1px, lines = 1, font-size = base-font-size, border-style = default-rhythm-border-style)`**    
+    Apply both leading and trailing borders.
