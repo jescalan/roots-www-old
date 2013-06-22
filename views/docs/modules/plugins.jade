@@ -6,43 +6,41 @@ h3#plugins plugins
 
     Here are a few examples of how plugins can look. Note that plugins are executed inside roots' environment, so if you want to require any external files, you need to use `module.require()` instead of just `require()` in order to have roots look for files starting in the plugins directory.
 
-    - [sass compiler](https://github.com/jenius/roots/blob/master/test/big-project/plugins/sass.coffee) (command line)
-    - [ejs compiler](https://github.com/jenius/roots/blob/master/lib/compilers/core/jade.js) (handles layout files)
-    - [stylus compiler](https://github.com/jenius/roots/blob/master/lib/compilers/core/styl.js) (js library based)
+    - [jade compiler](https://github.com/jenius/roots/blob/master/lib/adapters/jade.js)
+    - [stylus compiler](https://github.com/jenius/roots/blob/master/lib/adapters/styl.js)
+    - [coffeescript compiler](https://github.com/jenius/roots/blob/master/lib/adapters/coffee.js)
 
-    You will probably notice that a class called `Helper` is provided and does much of the work. This class manages important paths and file info and is designed to make compilers clean and easy to manage. Documentation for the `Helper` class is below.
+    You will notice that the plugin's compile method is passed two params, the first one being a `file` object which holds a large amount of information about the file being compiled, and the second is a callback. Below is documentation for the properties of the `file` object.
 
-    **`helper = new Helper(file)`**    
-    Sample code for how to initialize the helper. Takes a single file from the `files` object that the `compile` method receives
-
-    **`helper.extension`**    
-    Returns the extension of the current file
-
-    **`helper.target_extension`**    
-    Returns the extension that the file will compile into
-
-    **`helper.export_path`**    
-    Returns the absolute path where file will be written after compile
-
-    **`helper.file_path`**    
+    **`file.path`**    
     Returns the absolute path of the current file
 
-    **`helper.file_contents`**    
+    **`file.contents`**    
     Returns a string with the contents of the current file
 
-    **`helper.layout_path`**    
+    **`file.extension`**    
+    Returns the extension of the current file
+
+    **`file.target_extension`**    
+    Returns the extension that the file will compile into
+
+    **`file.export_path`**    
+    Returns the absolute path where file will be written after compile
+
+    **`file.layout_path`**    
     _If the file's target extension is html_, Returns the absolute path of the layout file it will be compiled into.
 
-    **`helper.layout_contents`**    
+    **`file.layout_contents`**    
     _If the file's target extension is html_, Returns the contents of the layout file it will be compiled into.
 
-    **`helper.locals(extra_object)`**    
+    **`file.locals(extra_object)`**    
     Returns all the local functions to be rendered with a view template. If you pass it an object, it will include it in the locals. You will want to add yield when compiling the layout, like in the ejs compiler example above.
 
-    **`helper.write(content)`**    
-    Writes the provided string to the correct file in the public directory.
+    If you console.log out a dynamic file, you may find more properties that are set as part of dynamic file parsing, but don't worry about these. Messing with the dynamic content properties inside a compiler is a terrible idea - **all a compiler should do is transform the file contents**.
 
-    If you want to dig into the `Helper` a bit more, feel free to [check out the source](https://github.com/jenius/roots/blob/master/lib/compilers/compile-helper.coffee). It's only one small file.
+    Note that if you are writing a plugin that parses html, **it must return a function** if you want to it have access to the locals. If it returns a string, locals will not be available. Every other file format should return a string.
+
+    If you want to dig into the file class a bit more, feel free to [check out the source](https://github.com/jenius/roots/blob/master/lib/utils/file_helper.js), but be warned that this particular file is wildly complicated.
 
     The following commands are also available to make working with plugins easier.
 
