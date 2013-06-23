@@ -4,25 +4,94 @@ h3#dynamic dynamic content
 //- TODO: Talk about order function here
 
 :markdown
-  A recent addition to roots will allow you to create dynamic content, much like jekyll, but a little cleaner and more flexible. The addition of dynamic content to roots makes it suitable for any website that doesn't need user accounts and logins. I think this is awesome because it widens the breadth of projects which you can create as a static site. And static sites are awesome because they are simple and fast as hell. Here's a short walkthrough of how to use dynamic content - I'll use a blog as an example:
 
-  - Create a folder at the root of the project called the name of your collection. Since I'm making a blog here, I'm going to call it "posts".
+  Roots' dynamic content is for the purpose of more cleanly handling pieces of content which belong to a group. Often times this can be determined by thinking of whether a master object could be said to "have many of" or be a collection of another set of objects, and when all of the set of objects that belong to the master object share properties, much like the way it's done with relational databases.
 
-  - Inside this folder, create a new jade file and name it whatever you want. Currently only jade is supported for dynamic content. This is your first blog post, whoo!
+  A great example of this is blog posts - a blog has many posts, and each post has a title, author, post date, and contents. Therefore, each post is a piece of dynamic content. On the other hand if you have an "about" page, you could say it has many pieces of content on it, maybe a photo, a video, and a few paragraphs, but since each of the pieces of content are entirely different, this would not be appropriate as a collection of dynamic content.
 
-  - Dyanmic files are defined by [yaml front matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter), exactly like jekyll. Only files with front matter are read as dynamic files. To make this file dynamic, add a front matter block, like this for example:    
+  ##### Basics
 
-            ---    
-            title: hello world    
-            date: 7/9/2013    
-            ---    
+  It's easy to create and access collections of dynamic content with roots. To create one, first make a folder and name it what the collection is called. For example, if we were making a blog, we could call the folder "posts", and inside of it would be all our blog posts.
 
-  - Below the front matter, use the full power of jade to write whatever html will be the body of your post. A great way to do this is to immediately throw down a markdown filter and just type out your post.
+  Next, make a file in that folder which will be our first piece of dynamic content. To differentiate between normal and dynamic content, roots reads the files and loks for [yaml front matter](http://jekyllrb.com/docs/frontmatter/) at the beginning of the file. The rest of the file can be any html you'd like. Here's a sample of what you could add to your first blog post:
 
-  - Now if you were running `watch`, restart the server. When you add new dynamic content, I haven't made it so that it's dynamically loaded yet, so you'll need a quick restart.
+  ```
+  ---
+  title: 'Hello World'
+  date: 6/23/2013
+  ---
 
-  - In your views, you will now have access to a variable called `site`. Inside of site will be stored any dynamic categories you have along with all their posts. So to access your blog posts, loop through `site.posts` (name of the folder sets the key).
+  :markdown
+    first post! **whoo**!
+  ```
 
-  - Each piece of dynamic content will be an object that contains all the key/value pairs from your yaml front matter as well as one additional key -- `content` -- which holds everything below the front matter.
+  After this has been done, when roots compiles, it will pull in an dynamic content and store it under a local variable in your html called `site`. Let's check this out -- in your `index.jade` file, drop this code:
 
-  - If you run `roots new whatever --blog`, I have a template set up that already has all the boilerplate set up, if you want to test it real quick.
+  ```
+  p!= JSON.stringify(site)
+  ```
+
+  When you compile, you'll see that now you have a namespace called `site.posts`, which was named after the folder your dynamic content is in, and it's an array of all the posts in the folder, which currently is just one. You can iterate through this object with jade to display an index of your blog posts.
+
+  Note that all the variables in the front matter are present, and anything underneath the front matter is compiled and stored in the `content` variable.
+
+  ##### Ordering
+
+  There is also a local function built in to roots that will allow you to more easily order your content. This function is available in all your view files, and is called `order`. Here's an example of how it could be used.
+
+  ```
+  - order(site.posts)
+  ```
+
+  This would look specifically for a property in the front matter called `order` (so it wouldn't work for our particular example), and sort by descending order. If you want to sort by another property, you can pass it in as an option:
+
+  ```
+  - order(site.posts, { by: 'snargle' })
+  ```
+
+  This would look for a front matter property called `snargle` and sort by that. In this case, we want to sort by date. The order function has special handling for this, as long as you call the property "date", it will do a proper date comparison.
+
+  ```
+  - order(site.posts, { by: 'date' }) 
+  ```
+
+  You can also choose whether it's in ascending or descending order. The default is always descending, but if you want to change this, just pass through the following option:
+
+  ```
+  - order(site.posts, { order: 'asc' })
+  ```
+
+  If you want to dig into the order function a little more, [check out the source](https://github.com/jenius/roots/blob/master/lib/config_parser.js#L37). It's just javascript : )
+
+  ##### Single views
+
+  Your blog wouldn't be complete unless each post had it's own single page view. Roots makes it easy for this to be implemented as well. All we need to do is add a `layout` property to the front matter, and reference a file by path relative to the post.
+
+  ```
+  ---
+  title: 'Hello World'
+  date: 6/23/2013
+  layout: ../views/_single_post.jade
+  ---
+
+  :markdown
+    first post! **whoo**!
+  ```
+
+  Now to finish it out, we'll just add a layout file at the path we defined. Note that single layouts for dynamic content get a special variable called `post` (it's always called `post` no matter what the folder name is), which holds the front matter variables, and the normal `content` variable holds the compiled content of the view, just like any other layout. Here's a simple example:
+
+  ```
+  head
+    title= post.title
+  body
+    h1= post.title
+    != content
+  ```
+
+  > **note**:
+  > make sure that your single post layouts are not compiled on their own,
+  > or they will throw an error. we avoided this using an underscore here.
+
+  ##### Tutorials
+
+  There's a [video tutorial](http://www.youtube.com/watch?v=Y7_WILKNAUE&feature=youtu.be) available that walks through dynamic content. You can also run `roots new --blog` to get a project template that's set up to handle dynamic content already.

@@ -1,0 +1,24 @@
+h3#multipass multipass compilation
+:markdown
+  As of version `2.0.0`, roots can compile a single file multiple times and for different languages. This can be very useful if you are trying to do some more advanced types of generation with roots. Over the next few release cycles, more examples will surface of multipass compilation being used in order to accomplish some fantastic things. Let's start with the basics though. Let's say you want to parse jade, but first make everything uppercase, because that's a great time.
+
+  First, you need a new compiler. We'll call it `upcaser`. We can add compilers to roots using the plugin api, documented above. Here's a simple plugin that will just upcase everything.
+
+  ```
+  exports.settings =
+    file_type: 'upcase'
+    target: ''
+
+  exports.compile = (file, callback) ->
+    error = false
+    compiled_contents = null
+
+    try
+      compiled_contents = file.contents.toUpperCase()
+    catch err
+      error = err
+
+    callback(error, compiled_contents)
+  ```
+
+  If we drop this file in a `plugins` folder at the root, it will be added to the pipeline. Now all that's left is adding our new "upcase" extension to a file and seeing what happens. Change `index.jade` to `index.jade.upcase`, and run `roots watch`. Enjoy the ease with which you just ruined your website, and feel the power of multipass compilation coursing through your veins.
