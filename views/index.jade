@@ -18,20 +18,21 @@
 
     - extremely simple [installation](#installation)
     - clean and minimal default project template
+    - clean and intuitive app settings file
     - [jade](http://jade-lang.com/), [stylus](http://learnboost.github.com/stylus/), and [coffeescript](http://coffeescript.org/) default stack
+    - easy to add languages with a simple and well-documented [plugin interface](/docs#plugins)
     - super fast live reload implementation
     - compile errors displayed as a flash message, doesn’t break workflow
     - layouts and partials fully supported
     - [coffeescript](http://coffeescript.org/) and [markdown](http://daringfireball.net/projects/markdown/) can be written directly in views
-    - extremely robust, modular, and powerful [css helper library](/axis) built in
     - global variables and functions (view helpers)
-    - clean and intuitive app settings file
-    - single command deploy to heroku
+    - extremely robust, modular, and powerful [css helper library](/axis) built in
+    - single command deploy to heroku, nodejitsu, or github pages
     - intelligently minifies html, css, and js on deploy
     - efficient client-side js management through [bower](http://bower.io) and [require.js](http://requirejs.org/)
-    - easy to extend with a simple and well-documented plugin interface
     - automatically [precompiles jade templates](/docs#precompile) for use in client-side MVCs like backbone
     - use [dynamic content](/docs#dynamic) to create collections, blogs, etc
+    - compile a single file [for multiple languages](/docs#multipass)
 
   h3#installation installation
   :markdown
@@ -72,7 +73,12 @@
 
   h3#help help
   :markdown
-    If you need help or something is confusing, feel free to [consult the docs](/docs), [file an issue](http://github.com/jenius/roots/issues), or [get in touch with me directly](http://jenius.me/#!/contact). I can't debug your app, but if you have found an issue or have a feature request I'd be more than happy to discuss and try to implement it!
+    If you are confused and/or having trouble, one of the solutions below will almost certainly get you back on your feet:
+
+    - Consult the [docs](/docs)
+    - File an [issue](https://github.com/jenius/roots/issues)
+    - Ask us in the official IRC channel on freenode, **#roots-dev**
+    - [Tweet](http://twitter.com/jescalan) at me, and we'll work it out
 
   h3#faq faq
   :markdown
@@ -80,7 +86,10 @@
     Breathe deep. I know this project is not perfect. I'm only one guy, I'm doing my best &mdash; promise! I'd be happy to look into any issue - just [file an issue on github](https://github.com/jenius/roots/issues) and I'll get to it as quickly as I can.
 
     **Who are the great-looking people behind this project?**    
-    Oh hello, I'm [Jeff](http://jenius.me). I'm lucky enough to write code and design at the best company in the world, [carrot creative](http://carrotcreative.com). You can find/follow me on the twitters [here](http://twitter.com/jescalan) if you want to chat or listen to my craziness. I'd also like to give some huge props to everyone who helped me out with this project, mainly [Sam](http://twitter.com/sam_saccone), whose contributions, support, and trolling have been immense. <3
+    Oh hello, I'm [Jeff](http://jenius.me). I'm lucky enough to write code and design at the best company in the world, [carrot creative](http://carrotcreative.com). You can find/follow me on the twitters [here](http://twitter.com/jescalan) if you want to chat or listen to my craziness. I'd also like to give some huge props to everyone who helped me out with this project, mainly:
+
+    - [Sam](http://twitter.com/sam_saccone), whose contributions, support, and trolling have been immense.
+    - [Sean](https://github.com/slang800), a precocious voice of reason, working hard to push roots forward
 
     **Is roots totally free?**    
     Why yes it is! It's licensed under [MIT](http://github.com/jenius/roots#license), which means you can use it free forever. It's because I love you. If you love roots, I would feel great if you [let me know](http://twitter.com/jescalan)!
@@ -92,4 +101,4 @@
     Although it is possible through roots' plugin interface, truthfully roots is not built to be used with ruby libraries like haml, sass, or compass. If roots seems like your kind of jam, but you haven't used jade or stylus before, I would strongly recommend _trying them out_. They are _very_ similar to haml/sass, and in fact are in many ways cleaner and more flexible. If you really don't think you can handle it, I would recommend checking out [middleman](http://middlemanapp.com/), a similar project built on top of ruby with support for haml, sass, and compass out of the box. I have used it before and it's fantastic.
 
     **Can I contribute to this project?**    
-    Yes! In fact, I would love it if you did. The repo for the command line client is [right here on github](https://github.com/jenius/roots), and the repo for the css library is [here](https://github.com/jenius/axis). Please, help a brother out!
+    Yes! In fact, I would love it if you did. The repo for roots is [right here on github](https://github.com/jenius/roots), and the repo for the css library (axis) is [here](https://github.com/jenius/axis). Please, help a brother out!
