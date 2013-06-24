@@ -37,31 +37,31 @@ h3#dynamic dynamic content
 
   ##### Ordering
 
-  There is also a local function built in to roots that will allow you to more easily order your content. This function is available in all your view files, and is called `order`. Here's an example of how it could be used.
+  There is also a local function built in to roots that will allow you to more easily sort and order your content. This function is available in all your view files, and is called `sort`. Here's an example of how it could be used.
 
   ```
-  - order(site.posts)
+  - sort(site.posts)
   ```
 
   This would look specifically for a property in the front matter called `order` (so it wouldn't work for our particular example), and sort by descending order. If you want to sort by another property, you can pass it in as an option:
 
   ```
-  - order(site.posts, { by: 'snargle' })
+  - sort(site.posts, { by: 'snargle' })
   ```
 
-  This would look for a front matter property called `snargle` and sort by that. In this case, we want to sort by date. The order function has special handling for this, as long as you call the property "date", it will do a proper date comparison.
+  This would look for a front matter property called `snargle` and sort by that. For our blog, we want to sort by date. The order function has special handling for this, as long as you call the property "date", it will do a proper date comparison.
 
   ```
-  - order(site.posts, { by: 'date' }) 
+  - sort(site.posts, { by: 'date' }) 
   ```
 
   You can also choose whether it's in ascending or descending order. The default is always descending, but if you want to change this, just pass through the following option:
 
   ```
-  - order(site.posts, { order: 'asc' })
+  - sort(site.posts, { order: 'asc' })
   ```
 
-  If you want to dig into the order function a little more, [check out the source](https://github.com/jenius/roots/blob/master/lib/config_parser.js#L37). It's just javascript : )
+  If you want to dig into the sort function a little more, [check out the source](https://github.com/jenius/roots/blob/master/lib/config_parser.js#L37). It's just javascript : )
 
   ##### Single views
 
