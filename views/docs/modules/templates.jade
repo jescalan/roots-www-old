@@ -1,0 +1,12 @@
+h3#templates custom templates
+
+:markdown
+  So maybe you like the idea of roots, but coffeescript isn't your thing. Or it bothers you that requirejs is the default and you prefer another way of doing it. Or maybe (*shudder*) you like twitter bootstrap by default. As of `v2.0.0`, roots allows you to create custom roots templates and use them to initialize your projects.
+
+  To add your own template, all you have to do is create it, upload it to a service like github, then run:
+
+  `roots template add mytemplate https://github.com/exampleuser/mytemplate`.
+
+  Now when you are making a new project, use `roots new <name> --mytemplate`. Or even better, if you want it to be the default, run `roots template default mytemplate`, and it will use your custom template when you call `roots new <name>` without args.
+
+  For more details on adding, removing, and using templates, [see the man page](man.html#TEMPLATE)
