@@ -1,20 +1,48 @@
 h3#grid grid
 :markdown
-  There are hundreds of existing grid systems out there, and honestly there is no need to make another one just for roots. So I brought in the most excellent and flexible [semantic.gs](http://semantic.gs), which is truly fantastic. Feel free to check out the documentation on the semantic.gs site - but it's very easy to use. To set initial styles, call `grid()` at root level. There are a few configuration variables for the grid in the settings file. What follows is an example of a fluid grid with a main area and sidebar.
+  We've brought in the most awesome [Jeet Framework Grid System](http://jeetframework.com) by [@ccccory](http://twitter.com/ccccory) as the spiritual successor to the semantic.gs implementation we had previously. This grid system makes it incredibly easy to create beautiful, fluid, semantic, responsive and (optionally) mobile-first designs. If you add [boxsizing.htc](https://github.com/Schepp/box-sizing-polyfill) (the path for which can be found in `settings.styl`) and [respond.js](https://github.com/scottjehl/Respond), your designs will be cross-browser compatible all the way down to IE7.     
 
-        grid()
+  **`grid()`**    
+  Call this at root level to prepare and initialize the grid. It sets some default styles on a few elements.
 
-        column-width = 60px
-        gutter-width = 20px
-        columns = 12
-        total-width = 100%
+  **`gutter = 1`**    
+  A variable which specifies gutter width as a percentage.
 
-        .main
-        .sidebar
-          float: left
+  **`center(mw = 1410px)`**    
+  Allows you to create a wrapping container that centers everything inside it on your page.    
+  `mw` = `max-width`. The default max-width is specified in your framework files and just sets the maximum width of your container. You can change this on the fly like so: `center(980px)`
 
-        .main
-          column(9)
+  **`column(numerator = 1, denominator = 1, number-of-nested-columns = 0, g = gutter)`**    
+  Specify a fraction of your containing element, for example applying `column(1,2)` to two `div`s in a container will set them to 48% width with a 1% gutter on each side of them. If you are nesting elements inside other elements, you should specify how many elements you will be nesting. `number-of-nested-columns` will remove the left gutter from the first element, and the right gutter from the last element.
 
-        .sidebar
-          column(3)
+  **`span(numerator = 1, denominator = 1)`**    
+  Use this instead of `column()` if you don't want to have gutters on your element. This is great for things like horizontal navigation buttons or anything that you want side-by-side.
+
+  **`offset(numerator = 0, denominator = 0, left-or-right = left, col-or-span = column)`**    
+  Used to add a mathematically-generated `margin-left` or `margin-right` to your element to push or pull it off by the specified number of columns.
+  `left` would be your push, and `right` would be your pull. `col-or-span` decides whether you want your margin to have spacing with gutters added to it or not. Typically, set this to whatever elements are surrounding it are set to.
+
+  **`-get(numerator = 1, denominator = 1, col-or-span = column)`**    
+  Returns a percentage size for use anywhere in your styles. Specify a fraction and then pick whether you want the gutter included in your sizing or not.
+
+  **`bp(w = 705px, mobile-first = false)` _and_ `endbp()`**    
+  Specifies a display breakpoint. This basically opens a media query on the fly for you that you must close with `endbp()`. You can add as many `bp()` calls as you want in your code.    
+  `w` = `width`. Accepts a specified width. By default this is 705px but it's recommended you manually contract your browser width to see when things start breaking. Set `mobile-first` to `mf` or `true` to change from `max-width` to `min-width` effectively giving you the tools to design for mobile first. `endbp()` accepts no parameters, it just closes your media query and is required any time you use `bp()`.
+
+  **`stack(align = c)`**    
+  This mixin lets you quickly specify an element to be "stacked". It effectively sets the width of the element to 100% and gives it a margin-bottom of 2%. If you don't want margin-bottom, you can overwrite it after your call to `stack()`. `align` sets the text alignment of the element to left, center or right.
+
+  **`pxfix()`**    
+  Safari and Opera like to round percentages down. As a result, 33.333333% turns into 33%. Mathematically this is correct, but in the web world, this results in missing pixels here and there. Usually at the end of a row of elements. `pxfix()` cures this with Nicole Sullivan's fix for last elements in a row.
+
+  **`edit()`**    
+  Root level mixin that adds a very light transparent background to every element on the page along with some fancy animation. Why? Because when you're editing with LiveReload and hit save, you'll see blocks fly into position which is totally sweet and helps visualize the structure of your site.
+
+  **Useful Aliases**    
+  `col` = `column`    
+  `g`, `gut` = `gutter`    
+  `breakpoint` = `bp`    
+  `off` = `offset`    
+  `l` = `left`    
+  `c` = `center`    
+  `r` = `right`    
