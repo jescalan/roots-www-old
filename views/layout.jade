@@ -15,12 +15,12 @@ html
   body
     a.fork-ribbon(href='http://github.com/jenius/roots') fork on github
     include _header
-    != yield
+    != content
     footer
 
   //- add other scripts through require.js, not here
   script(data-main="/js/main", src="/js/require.js")
   != livereload
-  script
+  script.
       var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-37002571-1']);_gaq.push(['_setDomainName', 'roots.cx']);_gaq.push(['_trackPageview']);
       (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
