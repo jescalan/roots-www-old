@@ -41,12 +41,6 @@
   ol.man-decor li.tc {text-align:center;letter-spacing:4px}
   ol.man-decor li.tr {text-align:right;float:right}
   </style>
-  <style type='text/css' media='all'>
-  /* style: toc */
-  .man-navigation {display:block !important;position:fixed;top:0;left:113ex;height:100%;width:100%;padding:48px 0 0 0;border-left:1px solid #dbdbdb;background:#eee}
-  .man-navigation a,.man-navigation a:hover,.man-navigation a:link,.man-navigation a:visited {display:block;margin:0;padding:5px 2px 5px 30px;color:#999;text-decoration:none}
-  .man-navigation a:hover {color:#111;text-decoration:underline}
-  </style>
 </head>
 <!--
   The following styles are deprecated and will be removed at some point:
@@ -67,6 +61,7 @@
     <a href="#COMPILE">COMPILE</a>
     <a href="#WATCH">WATCH</a>
     <a href="#DEPLOY">DEPLOY</a>
+    <a href="#CLEAN">CLEAN</a>
     <a href="#VERSION">VERSION</a>
     <a href="#PKG">PKG</a>
     <a href="#PLUGIN">PLUGIN</a>
@@ -90,7 +85,8 @@
 <code>roots template &lt;command></code>  <br />
 <code>roots compile</code>  --no-compress  <br />
 <code>roots watch</code>  <br />
-<code>roots deploy</code> <var>name</var> --<var>service</var>    <br />
+<code>roots deploy</code> <var>name</var> --<var>service</var><br />
+<code>roots clean</code>  <br />
 <code>roots version</code>  <br />
 <code>roots pkg</code> <var>command</var>  <br />
 <code>roots plugin</code> <var>command</var></p>
@@ -108,11 +104,11 @@
 
 <p>  templates:</p>
 
-<pre><code>- default (jade, stylus, coffeescript) - default
-- ejs (ejs, stylus, coffeescript)
-- min (default stack, no comments and uses jade layouts)
-- basic (html, css, javascript, no layouts)
-- blog (blog example optimized for dynamic content)
+<pre><code>- default (jade, stylus, coffeescript) - default    
+- ejs (ejs, stylus, coffeescript)    
+- min (default stack, no comments and uses jade layouts)    
+- basic (html, css, javascript, no layouts)    
+- blog (blog example optimized for dynamic content)    
 </code></pre>
 
 <h2 id="TEMPLATE">TEMPLATE</h2>
@@ -122,9 +118,9 @@
 
 <p>  commands:</p>
 
-<pre><code>- add, &lt;name> &lt;git-url> (git clone will download the template)
-- remove, &lt;name> (be careful with this)
-- default, &lt;name> (sets a template to be the default for roots new)
+<pre><code>- add, &lt;name> &lt;git-url> (git clone will download the template)    
+- remove, &lt;name> (be careful with this)    
+- default, &lt;name> (sets a template to be the default for roots new)    
 </code></pre>
 
 <h2 id="COMPILE">COMPILE</h2>
@@ -142,11 +138,16 @@
 <p>  <code>deploy</code>, <var>name</var>, --<var>service</var>  <br />
   configure, compile, commit, and deploy your project. <var>name</var> optional for heroku.</p>
 
-<pre><code>services:
-  - heroku - default
-  - nodejitsu
-  - gh-pages
+<pre><code>services:    
+  - heroku - default    
+  - nodejitsu    
+  - gh-pages   
 </code></pre>
+
+<h2 id="CLEAN">CLEAN</h2>
+
+<p>  <code>clean</code>
+  remove the compiled files.</p>
 
 <h2 id="VERSION">VERSION</h2>
 
@@ -160,8 +161,8 @@
 
 <p>  package managers:</p>
 
-<pre><code>- bower (http://bower.io) - default
-- cdnjs (https://github.com/jenius/cli-js)
+<pre><code>- bower (http://bower.io) - default    
+- cdnjs (https://github.com/jenius/cli-js)    
 </code></pre>
 
 <p>  you can change your package manager via the <code>~/.rootsrc</code> file.</p>
@@ -173,7 +174,7 @@
 
 <p>  commands:</p>
 
-<pre><code>- generate --js (optional, generates a javascript template rather than coffeescript)
+<pre><code>- generate --js (optional, generates a javascript template rather than coffeescript)    
 - install &lt;username>/&lt;repo> (must provide a username/repo on github)
 </code></pre>
 
@@ -184,7 +185,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
-    <li class='tc'>June 2013</li>
+    <li class='tc'>August 2013</li>
     <li class='tr'>roots(1)</li>
   </ol>
 
